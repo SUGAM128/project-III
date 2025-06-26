@@ -140,7 +140,7 @@ def music_rec():
 	# print('---------------- Value ------------', music_dist[show_text[0]])
 	df = pd.read_csv(music_dist[show_text[0]])
 	df = df[['Name','Album','Artist','Link','Image']]
-	df = df.head(15)
+	df = df.head(90)
 	return df
 	
 def real_time_emotion():
@@ -191,5 +191,5 @@ def max_emotion_reccomendation():
 	# read music data from csv file
 	df = pd.read_csv('songs/'+max_emotion.lower()+'.csv')
 	df = df[['Name','Album','Artist','Link','Image']]
-	df = df.head(15)
+	df = df.head(90)
 	return max_emotion,df 

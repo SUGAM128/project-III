@@ -32,13 +32,13 @@ async function handleGeneratePlaylistClick() {
 }
 function changeEmojiTo(emotion) {
   emojiset = {
-    angry: "😡",
-    happy: "😊",
-    sad: "😢",
-    fearful: "😨",
-    disgusted: "🤢",
-    surprised: "😲",
-    neutral: "😐",
+    angry: "",
+    happy: "",
+    sad: "",
+    fearful: "",
+    disgusted: "",
+    surprised: "",
+    neutral: "",
   };
   let emoji = emojiset[emotion.toLowerCase()];
   let encoded_emoji = encodeURI(emoji);

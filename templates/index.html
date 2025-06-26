@@ -3,278 +3,262 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="" />
-    <title>Mood Melody</title>
+    <title>Moodify</title>
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
-      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
-      crossorigin="anonymous"
     />
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-      crossorigin="anonymous"
+      defer
     ></script>
-    <link
-      rel="canonical"
-      href="https://getbootstrap.com/docs/5.3/examples/navbar-static/"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/@docsearch/css@3"
-    />
-
-    <link href="navbar-static.css" rel="stylesheet" />
-    <link
-      href="{{ url_for('static', filename='/css/style.css') }}"
-      rel="stylesheet"
-    />
-    <script src="{{ url_for('static', filename='/script.js') }}" defer></script>
   </head>
-
   <body style="overflow-x: hidden">
-    <nav
-      class="navbar shadow-sm justify-content-between navbar-expand-lg bg-body-tertiary fixed-top"
-    >
-      <a href="#" class="navbar-brand ms-3"
-        ><img
-          style="height: 60px; transform: scale(1.5)"
-          src="{{ url_for('static', filename='/images/logo.png') }}"
-      /></a>
+    <nav class="navbar shadow-sm justify-content-between navbar-expand-lg bg-body-tertiary fixed-top">
+      <a href="#" class="navbar-brand ms-3">
+        <img
+          style="height: 40px; transform: scale(1.5)"
+          src="{{ url_for('static', filename='/images/logo1.png') }}"
+          alt="logo"
+        />
+      </a>
       <div class="navbar_options me-4">
         <ul class="nav nav-underline">
           <li class="nav-item">
-            <button
-              id="home"
-              class="nav-link text-primary active"
-              aria-current="page"
-            >
-              Home
-            </button>
+            
           </li>
           <li class="nav-item">
-            <button id="about" class="nav-link text-primary">About US</button>
+            <a href="#about" class="nav-link text-primary">About</a>
           </li>
           <li class="nav-item">
-            <a href="/app">
-              <button id="start" class="btn btn-primary btn-lg p-2">
-                Start->
-              </button></a
-            >
+            <button id="start" class="btn btn-primary btn-lg p-2">Start-&gt;</button>
           </li>
         </ul>
       </div>
     </nav>
-    <!-- HOME page -->
-    <div
-      id="home-tab"
-      class="tab active-tab justify-content-center mt-5 pt-5 ms-0 ps-2 me-0"
-      style="width: 98vw; overflow: hidden"
-    >
-      <div
-        class="hero-section d-flex justify-content-center align-items-center flex-wrap flex-column"
-      >
-        <h1 class="display-1 text-center mt-2 mb-5" style="width: 100vw">
-          Welcome to <br /><strong class="text-primary">Mood Melody</strong>
-        </h1>
-        <img
-          class="m-1 rounded shadow"
-          style="width: 90vw"
-          src="{{ url_for('static', filename='/images/hero.jpg') }}"
-          class="img-fluid"
-          alt="..."
-        />
-        <div>
-          <em class="lead text-primary-emphasis fs-1 m-3"
-            >" The Right Tune for Every Emotion. "</em
-          >
 
+    
+    <div id="home-tab" class="tab active-tab justify-content-center mt-5 pt-5 ms-0 ps-2 me-0" style="width: 98vw; overflow: hidden">
+      <div class="hero-section d-flex justify-content-center align-items-center flex-wrap flex-column">
+        <h1 class="display-1 text-center mt-2 mb-5" style="width: 100vw">
+          Welcome to <br /><strong class="text-primary">Moodify</strong>
+        </h1>
+        <img class="m-1 rounded shadow" style="width: 90vw" src="{{ url_for('static', filename='/images/hero.jpg') }}" class="img-fluid" alt="..." />
+        <div>
+          <em class="lead text-primary-emphasis fs-1 m-3">" The Right Tune for Every Emotion. "</em>
           <p class="description mb-5 mt-3">
-            Let your feelings guide your playlist. Experience music discovery
-            powered by your emotions.
+            Let your feelings guide your playlist. Experience music discovery powered by your emotions.
           </p>
         </div>
         <br />
         <button type="button" class="fs-2 btn btn-outline-primary">
-          <a style="text-decoration: none" href="/app"
-            >Let's Get<br />started</a
-          >
+          <a style="text-decoration: none" href="/app">Let's Get<br />started</a>
         </button>
       </div>
 
       <hr />
-      <div
-        class="workflow d-flex justify-content-center align-items-center flex-wrap flex-column"
-      >
-        <h1 class="text-primary-emphasis mb-5">
-          <strong>How Mood Melody Works</strong>
-        </h1>
-
-        <div
-          class="sliding_items slide-right first_card align-self-start slide-left"
-        >
+      <div  class="workflow d-flex justify-content-center align-items-center flex-wrap flex-column">
+        <h1 id="about" class="text-primary-emphasis mb-5"><strong>How Moodify Works</strong></h1>
+        <div class="sliding_items slide-right first_card align-self-start slide-left">
           <div class="card flex-row ms-5 me-5 border-0" style="width: 90%">
-            <img
-              src="{{ url_for('static', filename='/images/cover.jpg') }}"
-              class="card-img"
-              style="height: auto; width: 35vw"
-            />
+            <img src="{{ url_for('static', filename='/images/cover.jpg') }}" class="card-img" style="height: auto; width: 35vw" />
             <div class="card-body ms-3">
-              <h2 class="text-primary-emphasis mb-3">
-                1. Capture Your Expression
-              </h2>
+              <h2 class="text-primary-emphasis mb-3">1. Capture Your Expression</h2>
               <p class="card-text ms-5">
-                Begin your musical journey with a simple smile, a glance, or any
-                expression that you're feeling at this moment. Using your
-                webcam, MoodMelody captures your current emotion in real-time.
-                Don't worry about privacy; this process is secure and respects
-                your confidentiality. No photos are stored or shared. It's just
-                the first step to discovering a playlist as unique as your
-                feelings today. Ready to see what your emotions sound like?
-                content.
+                Begin your musical journey with a simple smile, a glance, or any expression that you're feeling at this moment. Using your webcam, Moodify captures your current emotion in real-time. Don't worry about privacy; this process is secure and respects your confidentiality. No photos are stored or shared.
               </p>
             </div>
           </div>
         </div>
-        <div
-          class="sliding_items slide-left second_card align-self-end me-2 ms-5 mt-5 mb-5"
-        >
-          <h2 class="text-primary-emphasis mb-3">
-            2. Emotion Analysis in Action
-          </h2>
+        <div class="sliding_items slide-left second_card align-self-end me-2 ms-5 mt-5 mb-5">
+          <h2 class="text-primary-emphasis mb-3">2. Emotion Analysis in Action</h2>
           <div class="card flex-row ms-4 me-5 mt-1 border-0" style="width: 90%">
             <div class="card-body ms-0">
               <p class="card-text ms-0 me-5">
-                Unlock the power of your emotions with our state-of-the-art
-                emotion analysis technology. By simply capturing your facial
-                expression, MoodMelody's advanced AI algorithms instantly
-                analyze your current emotional state. This process involves
-                identifying key facial markers that signify emotions such as
-                happiness, sadness, surprise, and more. Our system then
-                interprets these markers in real time, allowing us to understand
-                your mood accurately.
+                Moodify's advanced AI algorithms analyze your current emotional state in real time by identifying key facial markers that signify emotions such as happiness, sadness, surprise, and more.
               </p>
             </div>
-            <img
-              src="{{ url_for('static', filename='/images/ai.jpg') }}"
-              class="card-img"
-              alt="..."
-              style="width: 45%"
-            />
+            <img src="{{ url_for('static', filename='/images/ai.jpg') }}" class="card-img" alt="..." style="width: 45%" />
           </div>
         </div>
         <div class="sliding_items slide-right third_card align-self-end">
           <div class="card flex-row ms-5 me-5 border-0" style="width: 90%">
-            <img
-              src="{{ url_for('static', filename='/images/headphone.jpg') }}"
-              class="card-img"
-              style="height: auto; width: 35vw"
-            />
+            <img src="{{ url_for('static', filename='/images/headphone.jpg') }}" class="card-img" style="height: auto; width: 35vw" />
             <div class="card-body ms-3">
-              <h2 class="text-primary-emphasis mb-3">
-                3. Enjoy Your Personalized Music
-              </h2>
+              <h2 class="text-primary-emphasis mb-3">3. Enjoy Your Personalized Music</h2>
               <p class="card-text ms-5">
-                Dive into a musical journey that’s as unique as your emotions.
-                With MoodMelody, every playlist is a reflection of how you feel
-                at this moment. Gone are the days of generic playlists that
-                barely scratch the surface of your mood. Our advanced emotion
-                recognition technology curates a music selection that resonates
-                deeply with your current state, whether you’re elated,
-                contemplative, or in need of an energy boost.
+                Dive into a musical journey that’s as unique as your emotions. Our advanced emotion recognition technology curates a music selection that resonates with your current state.
               </p>
             </div>
           </div>
         </div>
       </div>
     </div>
-    <!-- End of home tab -->
-    <!-- page loader -->
-    <div id="loader-container" class="">
-      <div class="loader"></div>
-    </div>
 
-    <div
-      id="about-tab"
-      class="tab justify-content-center mt-5 pt-5 ms-0 ps-2 me-0"
-      style="width: 98vw"
-    >
-      <h1 class="text-center mt-4 mb-5">OUR TEAM</h1>
-      <div
-        class="about-img d-flex align-items-center justify-content-center mt-4"
-      >
-        <div class="image_and_details">
-          <img
-            src="{{ url_for('static', filename='/images/saugat_a.jpg') }}"
-            class="img-fluid"
-            alt="..."
-          /><br />
-          <div class="text-center mt-2">
-            <b>Saugat Adhikari</b>
-            <br />
-            Symbol No: 24567/076
+   
+
+    <!-- Authentication Modal (Login/Register) -->
+    <div class="modal fade" id="authModal" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Login or Register</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
-        </div>
-        <div class="image_and_details">
-          <img
-            src="{{ url_for('static', filename='/images/saugat_c.jpg') }}"
-            class="img-fluid"
-            alt="..."
-          /><br />
-          <div class="text-center mt-2">
-            <b>Saugat Chapagain</b>
-            <br />
-            Symbol No: 24568/076
-          </div>
-        </div>
-        <div class="image_and_details">
-          <img
-            src="{{ url_for('static', filename='/images/saugat_g.jpg') }}"
-            class="img-fluid"
-            alt="..."
-          /><br />
-          <div class="text-center mt-2">
-            <b>Saugat Gautam</b>
-            <br />
-            Symbol No: 24569/076
+          <div class="modal-body">
+            <ul class="nav nav-tabs" id="authTab" role="tablist">
+              <li class="nav-item" role="presentation">
+                <button
+                  class="nav-link active"
+                  id="login-tab"
+                  data-bs-toggle="tab"
+                  data-bs-target="#login"
+                  type="button"
+                  role="tab"
+                >
+                  Login
+                </button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button
+                  class="nav-link"
+                  id="register-tab"
+                  data-bs-toggle="tab"
+                  data-bs-target="#register"
+                  type="button"
+                  role="tab"
+                >
+                  Register
+                </button>
+              </li>
+            </ul>
+
+            <div class="tab-content mt-3">
+              <!-- Login Tab -->
+              <div class="tab-pane fade show active" id="login" role="tabpanel">
+                <div id="login-message"></div>
+                <form id="login-form">
+                  <div class="mb-3">
+                    <label class="form-label">Email</label>
+                    <input type="email" class="form-control" name="email" required />
+                  </div>
+                  <div class="mb-3">
+                    <label class="form-label">Password</label>
+                    <input type="password" class="form-control" name="password" required />
+                  </div>
+                  <button type="submit" class="btn btn-primary">Login</button>
+                </form>
+              </div>
+
+              <!-- Register Tab -->
+              <div class="tab-pane fade" id="register" role="tabpanel">
+                <div id="register-message"></div>
+                <form id="register-form">
+                  <div class="mb-3">
+                    <label class="form-label">Username</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      name="username"
+                      required
+                      pattern="[A-Za-z]{4,}"
+                      title="At least 4 alphabetic characters"
+                    />
+                  </div>
+                  <div class="mb-3">
+                    <label class="form-label">Email</label>
+                    <input type="email" class="form-control" name="email" required />
+                  </div>
+                  <div class="mb-3">
+                    <label class="form-label">Password</label>
+                    <input
+                      type="password"
+                      class="form-control"
+                      name="password"
+                      required
+                      pattern="(?=.*\d).{8,}"
+                      title="At least 8 characters including a number"
+                    />
+                  </div>
+                  <button type="submit" class="btn btn-success">Register</button>
+                </form>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-      <div class="about_content mt-5" style="width: 60vw; margin-left: 20vw">
-        <p>
-          Our team is made up of passionate musicians and inventors who are
-          committed to creating the ideal soundtrack to connect emotions.
-          Despite coming from different backgrounds, we work together to create
-          a sophisticated Emotion-Music Recommendation system that makes use of
-          deep learning and artificial intelligence.
-        </p>
-        <h3>Our Objective:</h3>
-
-        <p>
-          Our approach uses an advanced combination of algorithms for both music
-          suggestion and face emotion identification.
-        </p>
-        <h3>Our Approach:</h3>
-        <p>
-          Our recommendation system is constructed by combining content-based
-          and collaborative filtering methods.
-        </p>
-        <h3>Our Vision:</h3>
-        <p>
-          In our ideal future, music will be a natural part of every day life
-          and be used as a tool to improve and maintain mental health. We want
-          to use technology to help listeners and music connect more deeply by
-          making soundtracks that are specifically tailored to each listener's
-          mood. We hope that our Emotion-Music Recommendation system will make
-          finding the ideal music enjoyable and intuitive, bringing us closer to
-          a world in which every emotional experience can be exquisitely
-          accentuated by the appropriate tune. Come along on our quest to change
-          the way people perceive music so that each listen is an expression of
-          the heart.
-        </p>
-      </div>
     </div>
-    <!-- End of about us tab -->
+
+    <script>
+      // Show modal if user is not logged in and clicked start
+      document.getElementById("start").addEventListener("click", function (e) {
+        e.preventDefault();
+        fetch("/is_logged_in")
+          .then((res) => res.json())
+          .then((data) => {
+            if (data.logged_in) {
+              window.location.href = "/app";
+            } else {
+              let modal = new bootstrap.Modal(document.getElementById("authModal"));
+              modal.show();
+            }
+          });
+      });
+
+      // Login form submission
+      document.getElementById("login-form").addEventListener("submit", function (e) {
+        e.preventDefault();
+        const form = e.target;
+        const data = {
+          email: form.email.value,
+          password: form.password.value,
+        };
+        fetch("/login", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(data),
+        })
+          .then((res) => res.json())
+          .then((resp) => {
+            const msgDiv = document.getElementById("login-message");
+            msgDiv.innerHTML = "";
+            if (resp.success) {
+              window.location.href = resp.redirect;
+            } else {
+              msgDiv.innerHTML =
+                `<div class="alert alert-danger" role="alert">${resp.error}</div>`;
+            }
+          });
+      });
+
+      // Register form submission
+      document.getElementById("register-form").addEventListener("submit", function (e) {
+        e.preventDefault();
+        const form = e.target;
+        const data = {
+          username: form.username.value,
+          email: form.email.value,
+          password: form.password.value,
+        };
+        fetch("/register", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(data),
+        })
+          .then((res) => res.json())
+          .then((resp) => {
+            const msgDiv = document.getElementById("register-message");
+            msgDiv.innerHTML = "";
+            if (resp.success) {
+              msgDiv.innerHTML =
+                `<div class="alert alert-success" role="alert">${resp.message}</div>`;
+              form.reset();
+            } else {
+              msgDiv.innerHTML =
+                `<div class="alert alert-danger" role="alert">${resp.error}</div>`;
+            }
+          });
+      });
+    </script>
   </body>
 </html>

@@ -1,25 +1,106 @@
-from flask import Flask, render_template, Response, jsonify, request
-import gunicorn
+from flask import Flask, render_template, Response, jsonify, request, redirect, url_for, session
+from werkzeug.security import generate_password_hash, check_password_hash
+from flask_sqlalchemy import SQLAlchemy
+from datetime import datetime
 from camera import *
 from PIL import Image
+import numpy as np
 
 app = Flask(__name__)
+app.secret_key = 'your_secret_key_here'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///users.db'
+app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+
+db = SQLAlchemy(app)
+
+# Models
+class User(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    username = db.Column(db.String(80), unique=True, nullable=False)
+    email = db.Column(db.String(120), unique=True, nullable=False)
+    password = db.Column(db.String(200), nullable=False)
+
+class EmotionHistory(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    user_id = db.Column(db.Integer, db.ForeignKey('user.id'), nullable=False)
+    emotion = db.Column(db.String(50), nullable=False)
+    timestamp = db.Column(db.DateTime, default=datetime.datetime.utcnow)
+
+with app.app_context():
+    db.create_all()
 
 headings = ("Name", "Album", "Artist")
 df1 = music_rec()
-df1 = df1.head(15)
-
+# df1 = df1.head(15)
 
 @app.route("/")
 def index():
-    print(df1.to_json(orient="records"))
     return render_template("index.html", headings=headings, data=df1)
 
-@app.route('/app')
+@app.route("/app")
 def app_page():
-    # print(df1.to_json(orient="records"))
+    if 'user_id' not in session:
+        return redirect(url_for('index'))
     return render_template("app.html")
 
+@app.route('/login', methods=['POST'])
+def login():
+    data = request.json
+    email = data.get('email')
+    password = data.get('password')
+    user = User.query.filter_by(email=email).first()
+    if user and check_password_hash(user.password, password):
+        session['user_id'] = user.id
+        session['username'] = user.username  # ✅ store username in session
+        return jsonify({"success": True, "redirect": "/app"})
+    return jsonify({"success": False, "error": "Invalid credentials"})
+
+
+@app.route('/get_username')
+def get_username():
+    if 'user_id' in session:
+        user = User.query.get(session['user_id'])
+        if user:
+            return jsonify({'username': user.username})
+    return jsonify({'username': None})
+
+
+@app.route('/register', methods=['POST'])
+def register():
+    data = request.json
+    username = data.get('username')
+    email = data.get('email')
+    password = data.get('password')
+
+    if User.query.filter((User.username==username) | (User.email==email)).first():
+        return jsonify({"success": False, "error": "Username or email already exists"})
+    
+    hashed_password = generate_password_hash(password)
+    new_user = User(username=username, email=email, password=hashed_password)
+    db.session.add(new_user)
+    db.session.commit()
+    return jsonify({"success": True, "message": "Registration successful! You can now login."})
+
+@app.route('/is_logged_in')
+def is_logged_in():
+    return jsonify({'logged_in': 'user_id' in session})
+
+@app.route('/logout')
+def logout():
+    session.pop('user_id', None)
+    return redirect(url_for('index'))
+
+@app.route("/get_history")
+def get_history():
+    if 'user_id' not in session:
+        return jsonify([])
+
+    user_id = session['user_id']
+    history = EmotionHistory.query.filter_by(user_id=user_id).order_by(EmotionHistory.timestamp.desc()).all()
+    return jsonify([
+        {"emotion": h.emotion, "timestamp": h.timestamp.strftime('%Y-%m-%d %H:%M:%S')}
+        for h in history
+    ])
 
 def gen(camera):
     while True:
@@ -27,47 +108,72 @@ def gen(camera):
         frame, df1 = camera.get_frame()
         yield (b"--frame\r\n" b"Content-Type: image/jpeg\r\n\r\n" + frame + b"\r\n\r\n")
 
-
 @app.route("/video_feed")
 def video_feed():
-    return Response(
-        gen(VideoCamera()), mimetype="multipart/x-mixed-replace; boundary=frame"
-    )
+    return Response(gen(VideoCamera()), mimetype="multipart/x-mixed-replace; boundary=frame")
+
 @app.route("/live_emotion")
 def live_emotion():
     return real_time_emotion()
 
-@app.route("/t")
-def gen_table():
-    print(df1)
-    return df1.to_json(orient="records")
+import random
 
 @app.route("/get_recommendations")
 def get_recommendations():
-    [emotion,df1] = max_emotion_reccomendation()
-    return jsonify({"detected_emotion":emotion,"music_data":df1.to_dict(orient="records")if df1 is not None else None})
+    if 'user_id' not in session:
+        return jsonify({"error": "User not logged in"}), 401
+
+    detected_emotion, df1 = max_emotion_reccomendation()
+
+    # Save to history
+    new_history = EmotionHistory(user_id=session['user_id'], emotion=detected_emotion)
+    db.session.add(new_history)
+    db.session.commit()
+
+    # Shuffle and pick 10 songs
+    if df1 is not None and not df1.empty:
+        df1 = df1.sample(frac=1).head(10)  # shuffle and get top 10
+
+    return jsonify({
+        "detected_emotion": detected_emotion,
+        "music_data": df1.to_dict(orient="records") if df1 is not None else []
+    })
+
+# from flask import render_template, session
+
+# @app.route('/dashboard')
+# def dashboard():
+#     username = session.get('username')  # Assuming username is stored in session
+#     return render_template('dashboard.html', username=username)
+
+from flask import session, render_template
+
+# @app.route('/dashboard')
+# def dashboard():
+#     username = session.get('username')  # make sure this is set during login
+#     return render_template('dashboard.html', username=username)
 
 @app.route('/image', methods=['POST'])
 def upload_file():
-    # Check if the post request has the file part
     if 'file' not in request.files:
         return 'No file part in the request', 400
     file = request.files['file']
-    # If the user does not select a file, the browser submits an
-    # empty file without a filename.
     if file.filename == '':
         return 'No selected file', 400
     if file and allowed_file(file.filename):
         image = Image.open(file.stream)
         image_array = np.array(image)
-        [picture,detected_emotion]=emotion_rec(image_array)
+        [picture, detected_emotion] = emotion_rec(image_array)
+
+        if 'user_id' in session:
+            new_history = EmotionHistory(user_id=session['user_id'], emotion=detected_emotion)
+            db.session.add(new_history)
+            db.session.commit()
+
         return jsonify({"emotion": detected_emotion})
 
-
 def allowed_file(filename):
-    # Check if file extension is allowed
-    return '.' in filename and \
-           filename.rsplit('.', 1)[1].lower() in {'png', 'jpg', 'jpeg', 'gif'}
+    return '.' in filename and filename.rsplit('.', 1)[1].lower() in {'png', 'jpg', 'jpeg', 'gif'}
 
 if __name__ == "__main__":
     app.debug = True
