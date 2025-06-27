@@ -1,52 +1,301 @@
-,Name,Album,Artist,Link,Image
-0,Heathens,Heathens,Twenty One Pilots,https://p.scdn.co/mp3-preview/31b8d72a9480d06d28846b843539b8b5e58696db?cid=8a2de09d7dbc482ab0fa4875232acd8b,https://i.scdn.co/image/ab67616d0000b2732ca3ba8f334ca5a5f0312efb
-1,Attention,Voicenotes,Charlie Puth,https://p.scdn.co/mp3-preview/db76d34af2f966975e0c1b8b9e43dca882e27229?cid=8a2de09d7dbc482ab0fa4875232acd8b,https://i.scdn.co/image/ab67616d0000b273897f73256b9128a9d70eaf66
-2,Galway Girl,÷ (Deluxe),Ed Sheeran,https://p.scdn.co/mp3-preview/9b7635464dc2caea3837fcc5680d0f5f5d39ab03?cid=8a2de09d7dbc482ab0fa4875232acd8b,https://i.scdn.co/image/ab67616d0000b273ba5db46f4b838ef6027e6f96
-3,Faded,Different World,Alan Walker,https://p.scdn.co/mp3-preview/dd79198f4b4c43aef9c8e8e1c4708a402862dd0e?cid=8a2de09d7dbc482ab0fa4875232acd8b,https://i.scdn.co/image/ab67616d0000b273a108e07c661f9fc54de9c43a
-4,Symphony (feat. Zara Larsson),What Is Love? (Deluxe Edition),Clean Bandit,https://p.scdn.co/mp3-preview/582525d17cae952887337a1fcdf0e4763bf9ad1a?cid=8a2de09d7dbc482ab0fa4875232acd8b,https://i.scdn.co/image/ab67616d0000b27337fb0680110fbb107740de5d
-5,Fight Song,Wildfire,Rachel Platten,https://p.scdn.co/mp3-preview/6f663802836a949b3485a71e13ff92d7a6fba6b2?cid=8a2de09d7dbc482ab0fa4875232acd8b,https://i.scdn.co/image/ab67616d0000b273a9e4d7fae5dfcc8f9cc96bc9
-6,Rockabye (feat. Sean Paul & Anne-Marie),What Is Love? (Deluxe Edition),Clean Bandit,https://p.scdn.co/mp3-preview/dbf4049b4e6c037a9f03f7ce5299e9512d2ae8fa?cid=8a2de09d7dbc482ab0fa4875232acd8b,https://i.scdn.co/image/ab67616d0000b27337fb0680110fbb107740de5d
-7,Shape of You,÷ (Deluxe),Ed Sheeran,https://p.scdn.co/mp3-preview/7339548839a263fd721d01eb3364a848cad16fa7?cid=8a2de09d7dbc482ab0fa4875232acd8b,https://i.scdn.co/image/ab67616d0000b273ba5db46f4b838ef6027e6f96
-8,Something Just Like This,Memories...Do Not Open,The Chainsmokers,https://p.scdn.co/mp3-preview/4e117abe76700eb13e9e0557fa2d9c44b565b9da?cid=8a2de09d7dbc482ab0fa4875232acd8b,https://i.scdn.co/image/ab67616d0000b2730c13d3d5a503c84fcc60ae94
-9,Havana (feat. Young Thug),Camila,Camila Cabello,https://p.scdn.co/mp3-preview/49653dbbec996f228cb6edc046d318cd5a249ee6?cid=8a2de09d7dbc482ab0fa4875232acd8b,https://i.scdn.co/image/ab67616d0000b2736eb0b9e73adcf04e4ed3eca4
-10,Alone,Different World,Alan Walker,https://p.scdn.co/mp3-preview/ab66780b7a2f22456185bfa811515eaef4f7254c?cid=8a2de09d7dbc482ab0fa4875232acd8b,https://i.scdn.co/image/ab67616d0000b273a108e07c661f9fc54de9c43a
-11,That's What I Like,24K Magic,Bruno Mars,https://p.scdn.co/mp3-preview/93046e987d8c5bfdbeea2768ac1a8ecea17bd7e0?cid=8a2de09d7dbc482ab0fa4875232acd8b,https://i.scdn.co/image/ab67616d0000b273232711f7d66a1e19e89e28c5
-12,In the Name of Love,In the Name of Love,Martin Garrix,https://p.scdn.co/mp3-preview/4ed5a7f1b466a7635d625240b600af899a8e5b51?cid=8a2de09d7dbc482ab0fa4875232acd8b,https://i.scdn.co/image/ab67616d0000b2738c77bcf5f5a227d270d23370
-13,How Long,Voicenotes,Charlie Puth,https://p.scdn.co/mp3-preview/f7c09279fe91c88bb8a55062fbf368ec1087aeba?cid=8a2de09d7dbc482ab0fa4875232acd8b,https://i.scdn.co/image/ab67616d0000b273897f73256b9128a9d70eaf66
-14,Paris,Memories...Do Not Open,The Chainsmokers,https://p.scdn.co/mp3-preview/2b043ab3ea679d2e91c5bd827cbf24ef7a2b1b44?cid=8a2de09d7dbc482ab0fa4875232acd8b,https://i.scdn.co/image/ab67616d0000b2730c13d3d5a503c84fcc60ae94
-15,Perfect,÷ (Deluxe),Ed Sheeran,https://p.scdn.co/mp3-preview/4e30857a3c7da3f8891483643e310bb233afadd2?cid=8a2de09d7dbc482ab0fa4875232acd8b,https://i.scdn.co/image/ab67616d0000b273ba5db46f4b838ef6027e6f96
-16,24K Magic,24K Magic,Bruno Mars,https://p.scdn.co/mp3-preview/3a76820d510fa5f84abb413e9d13815bcc86da0f?cid=8a2de09d7dbc482ab0fa4875232acd8b,https://i.scdn.co/image/ab67616d0000b273232711f7d66a1e19e89e28c5
-17,My Way,My Way,Calvin Harris,https://p.scdn.co/mp3-preview/ed8d125912048b01914f6e5861742bec125602e8?cid=8a2de09d7dbc482ab0fa4875232acd8b,https://i.scdn.co/image/ab67616d0000b2738d12bc5e3ea5c9f4a967de32
-18,Ride,Blurryface,Twenty One Pilots,https://p.scdn.co/mp3-preview/b571ceecaadc03941bdf4e683ea26e4e6d3f7c17?cid=8a2de09d7dbc482ab0fa4875232acd8b,https://i.scdn.co/image/ab67616d0000b273352e5ec301a02278ffe53d14
-19,What About Us,Beautiful Trauma,P!nk,https://p.scdn.co/mp3-preview/2af485dcb9d7635367136b17ee74b88d8e895229?cid=8a2de09d7dbc482ab0fa4875232acd8b,https://i.scdn.co/image/ab67616d0000b27300164c96548a622d34b39828
-20,Your Song,Phoenix (Deluxe Edition),Rita Ora,https://p.scdn.co/mp3-preview/d57008f417a1466ac0ab02020560d4d61d904e80?cid=8a2de09d7dbc482ab0fa4875232acd8b,https://i.scdn.co/image/ab67616d0000b273f1b136eb0388414a8225a348
-21,Crying in the Club,Crying in the Club,Camila Cabello,https://p.scdn.co/mp3-preview/4700b5219093f6a4f5e4dc36b97ff60298996ff8?cid=8a2de09d7dbc482ab0fa4875232acd8b,https://i.scdn.co/image/ab67616d0000b273cec62b81146fe4d116fbb2fa
-22,Castle on the Hill,÷ (Deluxe),Ed Sheeran,https://p.scdn.co/mp3-preview/f3cb6f2e07da189bbace23509fd9c03d63949292?cid=8a2de09d7dbc482ab0fa4875232acd8b,https://i.scdn.co/image/ab67616d0000b273ba5db46f4b838ef6027e6f96
-23,Silence,Silence,Marshmello,https://p.scdn.co/mp3-preview/26ea0841d3e1dd4eec371df3c79fbcc4a6aed42d?cid=8a2de09d7dbc482ab0fa4875232acd8b,https://i.scdn.co/image/ab67616d0000b273f33ba583059dc2f7d08bf2b8
-24,Glorious (feat. Skylar Grey),GEMINI,Macklemore,https://p.scdn.co/mp3-preview/d5955286b6e230880c24b0b8c8eab30162eaeca7?cid=8a2de09d7dbc482ab0fa4875232acd8b,https://i.scdn.co/image/ab67616d0000b2732e94b668c60b06deb1c3a05c
-25,OMG (feat. Quavo),OMG (feat. Quavo),Camila Cabello,https://p.scdn.co/mp3-preview/f197464a3ec04a490ef25feacf7d61205ccb9c84?cid=8a2de09d7dbc482ab0fa4875232acd8b,https://i.scdn.co/image/ab67616d0000b273147a905ba006c3ed794f17fd
-26,Unforgettable,Jungle Rules,French Montana,https://p.scdn.co/mp3-preview/f8d5e3c37feb980e60cac2df4256250d4b5cf5b5?cid=8a2de09d7dbc482ab0fa4875232acd8b,https://i.scdn.co/image/ab67616d0000b2738a31195a371b2233456f6c07
-27,Feel It Still,Woodstock,Portugal. The Man,https://p.scdn.co/mp3-preview/47e41f47a7627e34bf34d039b32b9774b9b88768?cid=8a2de09d7dbc482ab0fa4875232acd8b,https://i.scdn.co/image/ab67616d0000b273af52c228c9619ff6298b08cd
-28,Young Dumb & Broke,American Teen,Khalid,https://p.scdn.co/mp3-preview/05e9e3f61b30cf532a171bf40db63c086f9b6d5b?cid=8a2de09d7dbc482ab0fa4875232acd8b,https://i.scdn.co/image/ab67616d0000b273988ede5e1276e758b5f9e577
-29,Love So Soft,Meaning of Life,Kelly Clarkson,https://p.scdn.co/mp3-preview/a52c824160da1344b8d4bf34be06d7242cbf8ba6?cid=8a2de09d7dbc482ab0fa4875232acd8b,https://i.scdn.co/image/ab67616d0000b2731b808f1c7fff4f3e81f79523
-30,Good Old Days (feat. Kesha),GEMINI,Macklemore,https://p.scdn.co/mp3-preview/c0e1c96502d357facf7ffaf1d143de31bbeb6780?cid=8a2de09d7dbc482ab0fa4875232acd8b,https://i.scdn.co/image/ab67616d0000b2732e94b668c60b06deb1c3a05c
-31,I Got You,Expectations,Bebe Rexha,https://p.scdn.co/mp3-preview/ad7f13185eba05eed93861996519f86da48b35ed?cid=8a2de09d7dbc482ab0fa4875232acd8b,https://i.scdn.co/image/ab67616d0000b27361fe6d3a50c0beaa3cfe33e9
-32,Slide (feat. Frank Ocean & Migos),Funk Wav Bounces Vol.1,Calvin Harris,https://p.scdn.co/mp3-preview/16f9a0b74ce7aa75cfcfcd2bd928cda87ba11045?cid=8a2de09d7dbc482ab0fa4875232acd8b,https://i.scdn.co/image/ab67616d0000b2734d3fa5ce7ba599f4fd7803ef
-33,Good Life (with G-Eazy & Kehlani),The Fate of the Furious: The Album,Various Artists,https://p.scdn.co/mp3-preview/44277204a6c71145a487055bc874a9a9a982a0b0?cid=8a2de09d7dbc482ab0fa4875232acd8b,https://i.scdn.co/image/ab67616d0000b2737ad65df023c98969d6bc4dbe
-34,Meant to Be (feat. Florida Georgia Line),Expectations,Bebe Rexha,https://p.scdn.co/mp3-preview/0b972d24c49e50be428edfacbafae85cb80249e9?cid=8a2de09d7dbc482ab0fa4875232acd8b,https://i.scdn.co/image/ab67616d0000b27361fe6d3a50c0beaa3cfe33e9
-35,Never Be the Same - Radio Edit,Camila,Camila Cabello,https://p.scdn.co/mp3-preview/367ded2c3b38a8dba98ea9dd2d19e8a3ebfd3133?cid=8a2de09d7dbc482ab0fa4875232acd8b,https://i.scdn.co/image/ab67616d0000b2736eb0b9e73adcf04e4ed3eca4
-36,I Miss You (feat. Julia Michaels),What Is Love? (Deluxe Edition),Clean Bandit,https://p.scdn.co/mp3-preview/8130edc24ce3f1110a625364086ebbf58aa93f21?cid=8a2de09d7dbc482ab0fa4875232acd8b,https://i.scdn.co/image/ab67616d0000b27337fb0680110fbb107740de5d
-37,Beautiful Trauma,Beautiful Trauma,P!nk,https://p.scdn.co/mp3-preview/563ddc8cd02d157337ceb294da671310026eabe9?cid=8a2de09d7dbc482ab0fa4875232acd8b,https://i.scdn.co/image/ab67616d0000b27300164c96548a622d34b39828
-38,Him & I (with Halsey),The Beautiful & Damned,G-Eazy,https://p.scdn.co/mp3-preview/f3b074fff3b73dfec619cf9a3ff72be8d6de2cb6?cid=8a2de09d7dbc482ab0fa4875232acd8b,https://i.scdn.co/image/ab67616d0000b273046527a9c176f7c2916f3530
-39,All Falls Down (feat. Juliander),Different World,Alan Walker,https://p.scdn.co/mp3-preview/9c2c885521fe2a3d98c7321331e74f142668c322?cid=8a2de09d7dbc482ab0fa4875232acd8b,https://i.scdn.co/image/ab67616d0000b273a108e07c661f9fc54de9c43a
-40,Miss You,Miss You,Louis Tomlinson,https://p.scdn.co/mp3-preview/724f72261f7ebbb0ca225067809858a035521c45?cid=8a2de09d7dbc482ab0fa4875232acd8b,https://i.scdn.co/image/ab67616d0000b273a36a14b068880028feb21360
-41,Finesse - Remix; feat. Cardi B,Finesse (Remix) [feat. Cardi B],Bruno Mars,https://p.scdn.co/mp3-preview/142595a5594e3ffec7c8a4ccd13bd1cb96fd9769?cid=8a2de09d7dbc482ab0fa4875232acd8b,https://i.scdn.co/image/ab67616d0000b27347e522adf030a78615cdea06
-42,Obsessed,Obsessed,Maggie Lindemann,https://p.scdn.co/mp3-preview/7df39498a6827ef8abed2beb43a9c8ececbfc1ce?cid=8a2de09d7dbc482ab0fa4875232acd8b,https://i.scdn.co/image/ab67616d0000b273fc75580b17b3c7ef02f30fa0
-43,Just Hold On,Neon Future III,Steve Aoki,https://p.scdn.co/mp3-preview/06209e862894c36b9f3e8faaf26950f2bb3a646f?cid=8a2de09d7dbc482ab0fa4875232acd8b,https://i.scdn.co/image/ab67616d0000b2732b83b1f05af0be85caec37e7
-44,Broken Glass,Waves,Rachel Platten,https://p.scdn.co/mp3-preview/e40083c5e58f221d6c5e65a3710bfd63844f4ed3?cid=8a2de09d7dbc482ab0fa4875232acd8b,https://i.scdn.co/image/ab67616d0000b27379a74bed80ea8e2ac850af1f
-45,Whatever You Want,Beautiful Trauma,P!nk,https://p.scdn.co/mp3-preview/f0f6b33d16bf4073fa79f6710b15912b41cc8a9f?cid=8a2de09d7dbc482ab0fa4875232acd8b,https://i.scdn.co/image/ab67616d0000b27300164c96548a622d34b39828
-46,Faking It (feat. Kehlani & Lil Yachty) - Radio Edit,Faking It (feat. Kehlani & Lil Yachty) [Radio Edit],Calvin Harris,https://p.scdn.co/mp3-preview/4a4c9d074706aa63a3c645987a4fb4036969fc59?cid=8a2de09d7dbc482ab0fa4875232acd8b,https://i.scdn.co/image/ab67616d0000b273ded395badc930ed7b1956a76
-47,Complicated (feat. Kiiara),Complicated (feat. Kiiara),Dimitri Vegas & Like Mike,https://p.scdn.co/mp3-preview/cc5698dc7b7246fb6f73b1f9e5f17b5168f9b002?cid=8a2de09d7dbc482ab0fa4875232acd8b,https://i.scdn.co/image/ab67616d0000b27305df880db084244f431803b4
-48,One Foot,What If Nothing,WALK THE MOON,https://p.scdn.co/mp3-preview/2624d29e5586a4d5c21947d77aabd03049431e02?cid=8a2de09d7dbc482ab0fa4875232acd8b,https://i.scdn.co/image/ab67616d0000b273ffbb5bd9ea83111033066254
-49,FRIENDS,Speak Your Mind (Deluxe),Anne-Marie,https://p.scdn.co/mp3-preview/6245dd62009fbbe6c5479d10d5470024553d60d0?cid=8a2de09d7dbc482ab0fa4875232acd8b,https://i.scdn.co/image/ab67616d0000b27338aae75dc37fb42457866ffd
-50,Heat,Meaning of Life,Kelly Clarkson,https://p.scdn.co/mp3-preview/03ddf5e9a333ddce42a75c320be10521d63f8bf0?cid=8a2de09d7dbc482ab0fa4875232acd8b,https://i.scdn.co/image/ab67616d0000b2731b808f1c7fff4f3e81f79523
+Name,Album,Artist,PreviewURL,Image,Language,SpotifyURL
+"Chaleya (From ""Jawan"")","Chaleya (From ""Jawan"")",Anirudh Ravichander,null,https://i.scdn.co/image/ab67616d0000b27360dbbb589dff0c57a3a4ffb2,Hindi,https://open.spotify.com/track/4nc6XiUze2Yh7wFueGOPv7
+Kabira,Yeh Jawaani Hai Deewani,Pritam,null,https://i.scdn.co/image/ab67616d0000b273707ea5b8023ac77d31756ed4,Hindi,https://open.spotify.com/track/4bD9z9qa4qg9BhryvYWB7c
+Ishq Hai,Mismatched: Season 3 (Soundtrack from the Netflix Series),Anurag Saikia,null,https://i.scdn.co/image/ab67616d0000b27379f4a87c23143f0abb14c279,Hindi,https://open.spotify.com/track/3vCzLB6kS2lGcIpm1OOUsy
+Raanjhana,The Arijit Singh Collection,Asad Khan,null,https://i.scdn.co/image/ab67616d0000b273627b5b17cb48f6e6956b842e,Hindi,https://open.spotify.com/track/7iv5enBhxphri6CwztAjt8
+Meethi Boliyaan,Kai Po Che (Original Motion Picture Soundtrack),Amit Trivedi,null,https://i.scdn.co/image/ab67616d0000b2736a942b2b8ec9c67ef5512287,Hindi,https://open.spotify.com/track/6iFm1CcTrJe7SbZqXMXuDk
+"Sajni (From ""Laapataa Ladies"")","Sajni (From ""Laapataa Ladies"")",Ram Sampath,null,https://i.scdn.co/image/ab67616d0000b273d5f4378b1ffc9119fdc7306d,Hindi,https://open.spotify.com/track/5zCnGtCl5Ac5zlFHXaZmhy
+"Tenu Sang Rakhna (From ""Jigra"")","Tenu Sang Rakhna (From ""Jigra"")",Achint,null,https://i.scdn.co/image/ab67616d0000b273a9ca2d9f13c1ba201ba7cea9,Hindi,https://open.spotify.com/track/0Yf9Tgv5f55njDQeuRUnQH
+Pal Pal,Pal Pal,Afusic,null,https://i.scdn.co/image/ab67616d0000b27385c5968be0d0d9c545241124,Hindi,https://open.spotify.com/track/4LMlVCXHJtCE9abhmn0mYo
+Heeriye (feat. Arijit Singh),Heeriye (feat. Arijit Singh),Jasleen Royal,null,https://i.scdn.co/image/ab67616d0000b2734a60872ae145776164540a7f,Hindi,https://open.spotify.com/track/5PUXKVVVQ74C3gl5vKy9Li
+"Kasturi (From ""Amar Prem Ki Prem Kahani"")","Kasturi (From ""Amar Prem Ki Prem Kahani"")",Arijit Singh,null,https://i.scdn.co/image/ab67616d0000b2730097e55317238f0a7dce13f6,Hindi,https://open.spotify.com/track/2E5kZ1qnB7V9bcwBEKvZv8
+Uljhan,Uljhan,Parth Srivastava,null,https://i.scdn.co/image/ab67616d0000b27374c31b940459f6b7f40520a2,Hindi,https://open.spotify.com/track/13nrujwIxpJl1xtoDpvxyY
+"Ishq - From ""Lost;Found""","Ishq (From ""Lost;Found"")",Faheem Abdullah,null,https://i.scdn.co/image/ab67616d0000b2739e3495a35db3c1e374ce09b5,Hindi,https://open.spotify.com/track/7hDoxkN20lLb06zifzYnD2
+Finding Her,Finding Her,Kushagra,null,https://i.scdn.co/image/ab67616d0000b27383141000ee8ce3b893a0b425,Hindi,https://open.spotify.com/track/5ThyDv6aRVU8AH4vXQNldF
+Is This Love,Kismat Konnection (Original Motion Picture Soundtrack),Mohit Chauhan,null,https://i.scdn.co/image/ab67616d0000b27370d1c1cddd8608784f288259,Hindi,https://open.spotify.com/track/0GVPRo9LEjxjT4C4o8BGot
+Bin Tere,I Hate Luv Storys (Original Motion Picture Soundtrack),Vishal-Shekhar,null,https://i.scdn.co/image/ab67616d0000b2731992dd7b33baf5887ea4a1ec,Hindi,https://open.spotify.com/track/3bZPdEskcnMdepwCaDSJRl
+Saajna,"I, Me Aur Main",Falak Shabbir,null,https://i.scdn.co/image/ab67616d0000b27322e2fdf8f6aff29175132ffe,Hindi,https://open.spotify.com/track/7KzGAwJRYS9KLMuVnStqYN
+Aashiq Tera,Happy Bhag Jayegi (Original Motion Picture Soundtrack),Altamash Faridi,null,https://i.scdn.co/image/ab67616d0000b273e005c1f068091493afd80816,Hindi,https://open.spotify.com/track/0SAZ4IHYMtjW4Lxrjm7NnG
+"Kesariya (From ""Brahmastra"")","Kesariya (From ""Brahmastra"")",Pritam,null,https://i.scdn.co/image/ab67616d0000b273c08202c50371e234d20caf62,Hindi,https://open.spotify.com/track/6VBhH7CyP56BXjp8VsDFPZ
+"Woh Lamhe Woh Baatein - From ""Zeher""",Zeher (Original Motion Picture Soundtrack),Atif Aslam,null,https://i.scdn.co/image/ab67616d0000b27325055b41603705c1172409da,Hindi,https://open.spotify.com/track/21kImg7AxLbl7rrciuAwoB
+Maand,Safar,Bayaan,null,https://i.scdn.co/image/ab67616d0000b273050a86ad4ac35aedb9b41d89,Hindi,https://open.spotify.com/track/2ZzZ2qwZBWlDKs420hhloc
+Chann Tu Mera,Chann Tu Mera,MnA,null,https://i.scdn.co/image/ab67616d0000b273efcca4630cb7c9c6e677da5d,Hindi,https://open.spotify.com/track/6xFkWYBLIqsSSnsRxVUkRG
+"Ve Kamleya (From ""Rocky Aur Rani Kii Prem Kahaani"")","Ve Kamleya (From ""Rocky Aur Rani Kii Prem Kahaani"")",Pritam,null,https://i.scdn.co/image/ab67616d0000b27339890c916878b32aebd1d0ee,Hindi,https://open.spotify.com/track/6EivvaEepVTjmDde43eGiB
+"Ghodey Pe Sawaar (From ""Qala"")","Ghodey Pe Sawaar (From ""Qala"")",Amit Trivedi,null,https://i.scdn.co/image/ab67616d0000b273de95675c9c65702dd6a86be1,Hindi,https://open.spotify.com/track/1a8w8nlIyIhE2W1HIayKnl
+Khwabon Mein - Lofi Verson,Khwabon Mein (Lofi Version),MnA,null,https://i.scdn.co/image/ab67616d0000b27370ea12bcbd53c5a025b545c8,Hindi,https://open.spotify.com/track/7fzmh4V3joCoLNigX091hz
+O Rangrez,Bhaag Milkha Bhaag (Original Motion Picture Soundtrack),Shankar-Ehsaan-Loy,null,https://i.scdn.co/image/ab67616d0000b273fd2df008046f04c32d9c0c2e,Hindi,https://open.spotify.com/track/5JCDVLwteSXuwVqjCa7SwH
+"Tum Se (From ""Teri Baaton Mein Aisa Uljha Jiya"")","Tum Se (From ""Teri Baaton Mein Aisa Uljha Jiya"")",Sachin-Jigar,null,https://i.scdn.co/image/ab67616d0000b273b608e9bcf3845d082d1d559e,Hindi,https://open.spotify.com/track/2ceeTJAzKy295Fm0VsaXtE
+Samjhawan,Humpty Sharma Ki Dulhania (Original Motion Picture Soundtrack),Jawad Ahmad,null,https://i.scdn.co/image/ab67616d0000b273118f1494d8f5ebea6cd5e20d,Hindi,https://open.spotify.com/track/4LO5DjN6Tp3UkUvgESuy2t
+"Mushkil Hai (From ""Vicky Vidya Ka Woh Wala Video"")","Mushkil Hai (From ""Vicky Vidya Ka Woh Wala Video"")",Sachin-Jigar,null,https://i.scdn.co/image/ab67616d0000b2738d4a22e41df74acc689b98f1,Hindi,https://open.spotify.com/track/0nIN3cdeqNLLTGerYSKSXN
+"O Maahi (From ""Dunki"")","O Maahi (From ""Dunki"")",Pritam,null,https://i.scdn.co/image/ab67616d0000b2737506d87e6489c5a93c042523,Hindi,https://open.spotify.com/track/0qQ4IdhjzNr0gJhdMTf2n3
+"Sapna Jahan (From ""Brothers"")","Sapna Jahan (From ""Brothers"")",Ajay-Atul,null,https://i.scdn.co/image/ab67616d0000b273471b7e4f9c2fcf92d4f1e5c1,Hindi,https://open.spotify.com/track/6uQkoo1UGWThtEpNEYc6Ga
+"Janiye (from the Netflix Film ""Chor Nikal Ke Bhaga"")","Janiye (from the Netflix Film ""Chor Nikal Ke Bhaga"")",Vishal Mishra,null,https://i.scdn.co/image/ab67616d0000b2736624811ee1d8d7ccf5fadb80,Hindi,https://open.spotify.com/track/0645eBDehHcqfiF15hscQV
+"Lutt Putt Gaya (From ""Dunki"")","Lutt Putt Gaya (From ""Dunki"")",Pritam,null,https://i.scdn.co/image/ab67616d0000b2731a2e85cf59d754808254425f,Hindi,https://open.spotify.com/track/72Z2D7jpKevicRkyL45mbw
+"Aadat - From ""Kalyug""",Kalyug (Original Motion Picture Soundtrack),Atif Aslam,null,https://i.scdn.co/image/ab67616d0000b273a42a1a134199e3568884af8e,Hindi,https://open.spotify.com/track/5VrLz2NUTLbPzgjuVOjxUx
+Soulmate,Ek Tha Raja,Badshah,null,https://i.scdn.co/image/ab67616d0000b2739bb2d30b01ac2cada8a8ad03,Hindi,https://open.spotify.com/track/1tf2iody5iRLYYPDSBpzRc
+Khwabon Mein Teri Meri Batien,Khwabon Mein Teri Meri Batien,MnA,null,https://i.scdn.co/image/ab67616d0000b273fcdc3fc717929fe5c9cf7d2c,Hindi,https://open.spotify.com/track/5MWkvISopHReyUSwXQh3WL
+"Satranga (From ""ANIMAL"")","Satranga (From ""ANIMAL"")",Arijit Singh,null,https://i.scdn.co/image/ab67616d0000b273021d7017f73387b008eab271,Hindi,https://open.spotify.com/track/3yHyiUDJdz02FZ6jfUbsmY
+"Dekhha Tenu (From ""Mr. And Mrs. Mahi"")","Dekhha Tenu (From ""Mr. And Mrs. Mahi"")",Mohammad Faiz,null,https://i.scdn.co/image/ab67616d0000b273c3be0e4563f5564640effc13,Hindi,https://open.spotify.com/track/34Fh4HXZmnuBdtgejWUZg2
+Shayad,Love Aaj Kal (Original Motion Picture Soundtrack),Pritam,null,https://i.scdn.co/image/ab67616d0000b273095191f6b96fd9eff585befc,Hindi,https://open.spotify.com/track/1smFN2CLqGROu0J0UyvDfL
+With You,With You,AP Dhillon,null,https://i.scdn.co/image/ab67616d0000b27382549c22cd3c6e03351bd1c5,Hindi,https://open.spotify.com/track/0xIuPDzJSnJywALez8dwKR
+Qaafirana,Kedarnath (Original Motion Picture Soundtrack),Amit Trivedi,null,https://i.scdn.co/image/ab67616d0000b273c65eb44f9039e006247ef8f7,Hindi,https://open.spotify.com/track/7BCp5hEiiDSmXsxsXkvYff
+Malang Sajna,Malang Sajna,Sachet Tandon,null,https://i.scdn.co/image/ab67616d0000b273e4be675de3a03b2ad2552c6d,Hindi,https://open.spotify.com/track/73K33p4Vyz9koXGqmL5eFs
+"Ranjha (From ""Shershaah"")","Ranjha (From ""Shershaah"")",Jasleen Royal,null,https://i.scdn.co/image/ab67616d0000b27309426d9ae9d8d981735ebc5e,Hindi,https://open.spotify.com/track/72zHuDxFQTjbL51qJQSA7j
+Mulaqat,Mulaqat,Prateek Kuhad,null,https://i.scdn.co/image/ab67616d0000b2733db58808045108732961ec28,Hindi,https://open.spotify.com/track/7uZLUFqPgGqwzD5rzOl8Sa
+Mishri,Mishri,MnA,null,https://i.scdn.co/image/ab67616d0000b2733bfb9e251c49c7251a55f19a,Hindi,https://open.spotify.com/track/6NlXgqmDJme7eHJAcCHfNM
+Muskurane - Romantic,Citylights (Original Motion Picture Soundtrack),Jeet Gannguli,null,https://i.scdn.co/image/ab67616d0000b273f49fcf61abd7b674d0f16dc9,Hindi,https://open.spotify.com/track/6fW78cd0p3ZDUzoqvx2Xqe
+Maan Meri Jaan,Champagne Talk,King,null,https://i.scdn.co/image/ab67616d0000b27337f65266754703fd20d29854,Hindi,https://open.spotify.com/track/1418IuVKQPTYqt7QNJ9RXN
+Khaabon Ke Parinday,Zindagi Na Milegi Dobara,Alyssa Mendonsa,null,https://i.scdn.co/image/ab67616d0000b2730acb5a72549287bf33b51b71,Hindi,https://open.spotify.com/track/14eotumM24MhIgzidgN3Jx
+Mehrama,Love Aaj Kal (Original Motion Picture Soundtrack),Pritam,null,https://i.scdn.co/image/ab67616d0000b273095191f6b96fd9eff585befc,Hindi,https://open.spotify.com/track/6cUOiOY5qh2FpIQWIYAd2h
+Zinda,Lootera,Amit Trivedi,null,https://i.scdn.co/image/ab67616d0000b2730e26db222796cf4207425abc,Hindi,https://open.spotify.com/track/1gEHNfJRSXpDVaEicwRRfe
+Aahista,Aahista,MnA,null,https://i.scdn.co/image/ab67616d0000b273fd8a845ae9fcd91b75002e10,Hindi,https://open.spotify.com/track/3J0twYqhlGkFPhLKnRBgoP
+Betaabiyaan,Betaabiyaan,MnA,null,https://i.scdn.co/image/ab67616d0000b273d8bfa42a3ebe3baf51c406a0,Hindi,https://open.spotify.com/track/7LMZPkdsO0AyxT9YvkRYzx
+"Kamle (From ""Raid 2"")","Kamle (From ""Raid 2"")",Parampara Tandon,null,https://i.scdn.co/image/ab67616d0000b273b1a7fc692d68d8f5c8adfd2e,Hindi,https://open.spotify.com/track/5VUGcMfS9El8R39tSmBNxo
+Agar Tum Saath Ho,Tamasha,Alka Yagnik,null,https://i.scdn.co/image/ab67616d0000b273da50894e074ecd5ce61de0a1,Hindi,https://open.spotify.com/track/3hkC9EHFZNQPXrtl8WPHnX
+Tujhko Jo Paaya,Crook (Original Motion Picture Soundtrack),Pritam,null,https://i.scdn.co/image/ab67616d0000b273c32737e2c7f606beecbf1bae,Hindi,https://open.spotify.com/track/62kyw2ux2p0CZ7pKWtM6QO
+Bandeya,Bandeya,MnA,null,https://i.scdn.co/image/ab67616d0000b273122b49c4ff3349bab3e4765a,Hindi,https://open.spotify.com/track/0epfQMoGMr8XBVbUySsfOi
+Baarish Lete Aana,Baarish Lete Aana,Darshan Raval,null,https://i.scdn.co/image/ab67616d0000b273f4214316bcef51c998621e19,Hindi,https://open.spotify.com/track/6Oq4lIhSSYdA6WuXU9sPeG
+Saiyyan,Jhoomo Re,Kailash Kher,null,https://i.scdn.co/image/ab67616d0000b273cd3f6c3c2f2aa9b76fe635b1,Hindi,https://open.spotify.com/track/2vR23BjIzpLMtzsyKrM6Mb
+Hargiz,Hargiz,MnA,null,https://i.scdn.co/image/ab67616d0000b27383944874a5a588c4e00f1005,Hindi,https://open.spotify.com/track/40jiS9NBC26QJAC8IkPfe1
+Mera Mann Kehne Laga,Latest Songs Of Ayushmann Khurrana,Falak Shabbir,null,https://i.scdn.co/image/ab67616d0000b27338a1f0f963bd1fbc349dd1e6,Hindi,https://open.spotify.com/track/1ai3itvPFcWilE9NX0JTCf
+Mitti Di Khushboo,Mitti Di Khushboo,Rochak Kohli,null,https://i.scdn.co/image/ab67616d0000b2734da67f46c27811f22257fbfc,Hindi,https://open.spotify.com/track/7tp4iYvcZksGp1u7feUrrO
+Maana Ke Hum Yaar Nahin,Meri Pyaari Bindu,Sachin-Jigar,null,https://i.scdn.co/image/ab67616d0000b273d2f3f606e8d06c7a6a340a48,Hindi,https://open.spotify.com/track/1O3WfEwaSpsgZ6tw8jNT8I
+Zehnaseeb,Hasee Toh Phasee (Original Motion Picture Soundtrack),Vishal-Shekhar,null,https://i.scdn.co/image/ab67616d0000b2732025db071cd9dd7e8023e01e,Hindi,https://open.spotify.com/track/3xF15SqY32Mno3UUMBirhU
+fanaah / tabaah,meher / rehem,Murtuza Gadiwala,null,https://i.scdn.co/image/ab67616d0000b27355894863ea53e27b3778d6b4,Hindi,https://open.spotify.com/track/5ABvdeTJ4IBrpXuvZQgQnj
+Ghar Se Nikalte Hi,Ghar Se Nikalte Hi,Amaal Mallik,null,https://i.scdn.co/image/ab67616d0000b2739969316c454fb52e20050598,Hindi,https://open.spotify.com/track/1Dw8GkFpFjUpNTUpfF5lee
+"Shayad (Aaj Kal) - From ""Love Aaj Kal""","Shayad (Aaj Kal) [From ""Love Aaj Kal""]",Pritam,null,https://i.scdn.co/image/ab67616d0000b2738e366049ef281f57f3b7f49d,Hindi,https://open.spotify.com/track/3WXvr6rwl4I8U3ancJ08Yy
+Khamoshiyan,Khamoshiyan (Original Motion Picture Soundtrack),Jeet Gannguli,null,https://i.scdn.co/image/ab67616d0000b2738d07544fddf5b7d9a1e41554,Hindi,https://open.spotify.com/track/6zCQF5tu7HVwU9shhKqiuF
+Chale jo sath hum yahan,UNTIL NOW,Shrinidhi Ghatate,null,https://i.scdn.co/image/ab67616d0000b273445b96951f77d833396263f8,Hindi,https://open.spotify.com/track/5wTWDUcE2TF2TYQqbyD2pH
+Mishri,Mishri,MnA,null,https://i.scdn.co/image/ab67616d0000b273170d1bf4ae3cc5aa9b2e9b42,Hindi,https://open.spotify.com/track/7IeSH0Z5SuSbxxkDeOGgVN
+Humnava Mere,Humnava Mere,Jubin Nautiyal,null,https://i.scdn.co/image/ab67616d0000b273c1cd18ce264a99c525dd88f5,Hindi,https://open.spotify.com/track/0loZn1c5heXie7OAtvK6nH
+tere bina,tere bina,Zaeden,null,https://i.scdn.co/image/ab67616d0000b273f777db9f9ac6ad355e9e23aa,Hindi,https://open.spotify.com/track/6N5WkgPIDoTdbCXyyIIKAv
+Sajna Ve,Sajna Ve,Vishal Mishra,null,https://i.scdn.co/image/ab67616d0000b27327c53fb5936805cce850dafd,Hindi,https://open.spotify.com/track/1lWjvbQWru7XPekvQGiKv5
+Hamare Ghar Chorde Jo,Hamare Ghar Chorde Jo,MnA,null,https://i.scdn.co/image/ab67616d0000b273fdef5940138c3ec92419919e,Hindi,https://open.spotify.com/track/2NMyRijQQtUgegJ8L8QNWe
+Ishqe Di Lat,Junooniyat,Ankit Tiwari,null,https://i.scdn.co/image/ab67616d0000b27369601760642afa73b2214775,Hindi,https://open.spotify.com/track/6EQxyJVaWL72LNUTL5w0J6
+Mera Safar,Mera Safar,Iqlipse Nova,null,https://i.scdn.co/image/ab67616d0000b2731faa8833d0a35afb3f2ef96b,Hindi,https://open.spotify.com/track/2AB7fsbG0eZJjDGile69CQ
+Tu Hi Haqeeqat,Tum Mile (Original Motion Picture Soundtrack),Pritam,null,https://i.scdn.co/image/ab67616d0000b273bcb8ec035de7b2dda0f74660,Hindi,https://open.spotify.com/track/3OLFqbd9ZeVjaUKTiaLsD6
+Dil Mein Ho Tum,Why Cheat India,Armaan Malik,null,https://i.scdn.co/image/ab67616d0000b2735a6ad28bfb3e0da066a9df5e,Hindi,https://open.spotify.com/track/6P10EoBs8D9L7kjwgNkwFN
+Chup Chup,Chup Chup,Amartya Bobo Rahut,null,https://i.scdn.co/image/ab67616d0000b273839848ffdcffb6e07e4d682a,Hindi,https://open.spotify.com/track/73VaI8jZxHiqlR1yq899qe
+"Darkhaast (feat. Arijit Singh, Sunidhi Chauhan)",Shivaay,Mithoon,null,https://i.scdn.co/image/ab67616d0000b273e7fe7d656750737e8d369f95,Hindi,https://open.spotify.com/track/1awtp7rf6ajhGY9BgzCHeZ
+Shaam Simti,Shaam Simti,Amartya Bobo Rahut,null,https://i.scdn.co/image/ab67616d0000b273f4d51eb3a703ed79cae44492,Hindi,https://open.spotify.com/track/6vxqQUeZJdx1UcBBl6Wx1s
+Phir Se Ud Chala,Rockstar,Mohit Chauhan,null,https://i.scdn.co/image/ab67616d0000b27354e544672baa16145d67612b,Hindi,https://open.spotify.com/track/1kcV2LJxt5v0s2cEGtEJ5i
+Aabaad Barbaad,Ludo,Pritam,null,https://i.scdn.co/image/ab67616d0000b273b67a843ee7de84208f3e4f28,Hindi,https://open.spotify.com/track/3jxNbVmugKWFFc3YAVl0sD
+Hardum Humdum,Ludo,Pritam,null,https://i.scdn.co/image/ab67616d0000b273b67a843ee7de84208f3e4f28,Hindi,https://open.spotify.com/track/6hVq4MGBhPIniEmpGbJIWR
+Mast Magan,2 States,Arijit Singh,null,https://i.scdn.co/image/ab67616d0000b273c7b8d39b1e113845906984ab,Hindi,https://open.spotify.com/track/3uL1IBFhg52VcQqOwAG01E
+"Gazab Ka Hai Din (From ""Dil Juunglee"")",Romantic Hits By Jubin Nautiyal,Jubin Nautiyal,null,https://i.scdn.co/image/ab67616d0000b273712d7cc771c2d47f96be938c,Hindi,https://open.spotify.com/track/4byiHL0b9mIoCUCjbjI4eA
+Tere Jeya Hor Disda,Izafa,The Yellow Diary,null,https://i.scdn.co/image/ab67616d0000b273332c4e4b6481b532429fd0da,Hindi,https://open.spotify.com/track/7nIyZpAsOH3U0dYBiozXea
+Found the Love,Found the Love,YAY RECORDS,null,https://i.scdn.co/image/ab67616d0000b2731fe8b22e3808f267da3c47a0,Hindi,https://open.spotify.com/track/3ElVQqoUlxEOJjQzp2EjiM
+"Raabta (From ""Agent Vinod)",Love Dose Arijit Singh,Arijit Singh,null,https://i.scdn.co/image/ab67616d0000b2732d2263486e48ab1b41ae2466,Hindi,https://open.spotify.com/track/0hGM8pb57FctYjZVk7edc8
+Ratien Baki Nahin,Ratien Baki Nahin,MnA,null,https://i.scdn.co/image/ab67616d0000b2731ee16969d540c8b8f760cd74,Hindi,https://open.spotify.com/track/353noEyqqBJHiGnwvSq7Fn
+Bawara Mann,Best Of Jubin Nautiyal,Jubin Nautiyal,null,https://i.scdn.co/image/ab67616d0000b2732a167b54897210a4327c2dc7,Hindi,https://open.spotify.com/track/4Bilsnvap6SywArzCjtGzU
+"Darasal (From ""Raabta"")","Darasal (From ""Raabta"")",Atif Aslam,null,https://i.scdn.co/image/ab67616d0000b2732c1f340fb6af431e9365a6bf,Hindi,https://open.spotify.com/track/3phw912iJRhtMfsdJ1k3Sr
+Jiyein Kyun,Dum Maaro Dum,Pritam,null,https://i.scdn.co/image/ab67616d0000b273e39388ba8eadf58476135087,Hindi,https://open.spotify.com/track/0up9rhm9qt2LW7cnoDFCMk
+Kho Hi Gaya,Kho Hi Gaya,MnA,null,https://i.scdn.co/image/ab67616d0000b273d5fae11fd8944d5bd49a25e2,Hindi,https://open.spotify.com/track/5GLxw3wgYV2QOGZ5Cvn8PY
+Kasoor,Kasoor,Prateek Kuhad,null,https://i.scdn.co/image/ab67616d0000b273ae7abe97f7020d657e87bbec,Hindi,https://open.spotify.com/track/08kTa3SL9sV6Iy8KLKtGql
+Sham,Aisha (Original Motion Picture Soundtrack),Amit Trivedi,null,https://i.scdn.co/image/ab67616d0000b273c82a4c10b28c394a59f70c0c,Hindi,https://open.spotify.com/track/5Q58RkKyUafm15Syxg79DW
+Shayad Ke Main Zinda Nahin,Shayad Ke Main Zinda Nahin,Cha'bi,null,https://i.scdn.co/image/ab67616d0000b27316eb4ec6d691b20100e12284,Hindi,https://open.spotify.com/track/24hfa6PKUaOK1mEnHxG1Rk
+Saibo,Shor in the City (Original Motion Picture Soundtrack),Sachin-Jigar,null,https://i.scdn.co/image/ab67616d0000b2731aac2079e5047e1bfd1b59d9,Hindi,https://open.spotify.com/track/6udC4b4jOSnHb9ItnXgKLR
+Yahin Hoon Main,Yahin Hoon Main,Rochak Kohli,null,https://i.scdn.co/image/ab67616d0000b273dc9b7cbb066ba58df1e08a37,Hindi,https://open.spotify.com/track/30UWFQsrAfkzcsRWaiNLtU
+"Tose Naina (From ""Mickey Virus)",Love Dose Arijit Singh,Arijit Singh,null,https://i.scdn.co/image/ab67616d0000b2732d2263486e48ab1b41ae2466,Hindi,https://open.spotify.com/track/2fMlezwwP5Hr1UwuAknN4o
+Kabhi Kabhi Aditi,Jaane Tu... Ya Jaane Na,Rashid Ali,null,https://i.scdn.co/image/ab67616d0000b273abf91851997179d195afab5f,Hindi,https://open.spotify.com/track/3APdIdF8H0jsxSuGOqXedS
+Ishq Bulaava,Hasee Toh Phasee (Original Motion Picture Soundtrack),Vishal-Shekhar,null,https://i.scdn.co/image/ab67616d0000b2732025db071cd9dd7e8023e01e,Hindi,https://open.spotify.com/track/1fkjRQA8wXPPyxqYLbxuqy
+Naganya Maya,Naganya Maya,Sajjan Raj Vaidya,null,https://i.scdn.co/image/ab67616d0000b273586c6aae9b44133d3690d343,Nepali,https://open.spotify.com/track/4sakBPqSpuj6FJti1rPme7
+Lai Bari Lai,Deha Ra Aatma,Arthur Gunn,null,https://i.scdn.co/image/ab67616d0000b27330d2bc69d975c4e4959284a6,Nepali,https://open.spotify.com/track/50mT7HUmYrbs4N5f97Usq9
+Ek Muskaan (Ankit Dhakal),Ek Muskaan (Ankit Dhakal),GXSOUL,null,https://i.scdn.co/image/ab67616d0000b27340fbf688a477cb6e3030e640,Nepali,https://open.spotify.com/track/1qA9qskyfKjjxS5YBM4A0w
+Mayalu,Mayalu,Vek,null,https://i.scdn.co/image/ab67616d0000b2734ccaeba1bbdcc4e214ae8e92,Nepali,https://open.spotify.com/track/7lLeoZv3rPnfbh9AsJDJWq
+Eklai Huda Ta Jhan,Sullen Days,Phosphenes,null,https://i.scdn.co/image/ab67616d0000b2736ab31c49208252427dbbde12,Nepali,https://open.spotify.com/track/2v5y1AAcPhCnYQJGmp70YW
+Juni Vari Lai,Juni Vari Lai,Oasis Thapa,null,https://i.scdn.co/image/ab67616d0000b2735895c0b093d1fe799fa28ad5,Nepali,https://open.spotify.com/track/03oFer7ABe0Tc3lwOZkdvB
+Maya,Maya,Ashutosh KC,null,https://i.scdn.co/image/ab67616d0000b27359786c20c177b4935c9188aa,Nepali,https://open.spotify.com/track/49EbGl3cUQ8su57NDArCMo
+Maya,Maya,Ayush Gauchan,null,https://i.scdn.co/image/ab67616d0000b273e103602d02f64d252bc95564,Nepali,https://open.spotify.com/track/2iCvfpD5hEzLeqEbsXhXVQ
+Sunideu,Sunideu,Apurva Tamang,null,https://i.scdn.co/image/ab67616d0000b273ec04b77c8b3cd9857ff400c1,Nepali,https://open.spotify.com/track/39YgIosRNaZgwRgYjkYgkM
+Behos,Maya Ma (2018 Compilation),Sushant KC,null,https://i.scdn.co/image/ab67616d0000b2730451af1e5996228aeb7ca3dd,Nepali,https://open.spotify.com/track/3AZLDgqvdILajILwA5jPIo
+Laakhau Hajarau,Laakhau Hajarau,Yabesh Thapa,null,https://i.scdn.co/image/ab67616d0000b27340b0f57a4e93e6ba5ba50c21,Nepali,https://open.spotify.com/track/7FmmE8lJwwX61kVB3xU0vb
+K Huncha Bhanera,K Huncha Bhanera,DJ Bishow,null,https://i.scdn.co/image/ab67616d0000b273c4577f5099a3246c6288b41b,Nepali,https://open.spotify.com/track/2Xm6p2GBfQcjVV8FnvjQaf
+Ae Mutu,Ae Mutu,Yabesh Thapa,null,https://i.scdn.co/image/ab67616d0000b273ded3dbe3a36179504198e30a,Nepali,https://open.spotify.com/track/0oLlykxJddGnu0eLel4JuO
+Phutki Jaaney Jovan,Phutki Jaaney Jovan,Sajjan Raj Vaidya,null,https://i.scdn.co/image/ab67616d0000b2739fb8b0c8fa745976c8f7f76c,Nepali,https://open.spotify.com/track/12b3bKEbdjtL1Ga0n3ybzK
+"Hataarindai, Bataasindai","Hataarindai, Bataasindai",Sajjan Raj Vaidya,null,https://i.scdn.co/image/ab67616d0000b273840444f6aa4f66cad49e42f8,Nepali,https://open.spotify.com/track/3InRkuJj81zjC5MWlFR6rN
+Sano,Sano - Single,Apurva Tamang,null,https://i.scdn.co/image/ab67616d0000b273875df8244f90a4015151db09,Nepali,https://open.spotify.com/track/1aiRqouZ20SWvrwnATXzwW
+Ma Timro,Tuborg Open Sessions Season 2,Swoopna Suman,null,https://i.scdn.co/image/ab67616d0000b27382e152127365058070265471,Nepali,https://open.spotify.com/track/381HFZEMTlrcWanmvTM1FM
+Muskurayera,Maya Ma (2018 Compilation),Sushant KC,null,https://i.scdn.co/image/ab67616d0000b2730451af1e5996228aeb7ca3dd,Nepali,https://open.spotify.com/track/3gEXozdAKhOArKGMfW0m5W
+Maya Ma,Maya Ma (2018 Compilation),Sushant KC,null,https://i.scdn.co/image/ab67616d0000b2730451af1e5996228aeb7ca3dd,Nepali,https://open.spotify.com/track/7cKpWhrEnnqn5iaYvllaf9
+Batash,Batash,Shashwot Khadka,null,https://i.scdn.co/image/ab67616d0000b273c3cfb6473bc92b43759df805,Nepali,https://open.spotify.com/track/1A4clpbjUAXFAb3KdEX4Z4
+Mellow,Mellow,Rohit Shakya,null,https://i.scdn.co/image/ab67616d0000b273bfc6ba855157651b2d7cbe1a,Nepali,https://open.spotify.com/track/522Kz7dt6L6UVoHZzXpgkn
+Gulabi,Gulabi,Sushant KC,null,https://i.scdn.co/image/ab67616d0000b2739767574646972444d0c87495,Nepali,https://open.spotify.com/track/1YPktWvjzZW9zxZMStzG0L
+Marijau,Marijau,Bikki Gurung,null,https://i.scdn.co/image/ab67616d0000b273009e6824cb79b7325f25510c,Nepali,https://open.spotify.com/track/3o1fFTtPgaWW5qB5zD11AK
+Mooskaan,Mooskaan,Sajjan Raj Vaidya,null,https://i.scdn.co/image/ab67616d0000b27360209e39f19991a7b1b58c29,Nepali,https://open.spotify.com/track/6quygE0BQuMUY861Crte1N
+Bujhne Lai,Bujhne Lai,Tunna Bell Thapa,null,https://i.scdn.co/image/ab67616d0000b273ac56dabfa80de52cc3fcfaa4,Nepali,https://open.spotify.com/track/6RZTcM5fbXW4doKKQQVQF0
+Bhanai,Roka Yo Samay,Tribal Rain,null,https://i.scdn.co/image/ab67616d0000b273698de3a9f0f9794f7760ac7d,Nepali,https://open.spotify.com/track/0KqEwy3JfnY6ePwdXtCAfz
+K Yo Maya Ho,Viii,B-8eight,null,https://i.scdn.co/image/ab67616d0000b273adacc29b4d05ca46b2ae3e3a,Nepali,https://open.spotify.com/track/27ejNnVdZ1RgjLtp2Jf0BD
+Timile,Maya Ma (2018 Compilation),Sushant KC,null,https://i.scdn.co/image/ab67616d0000b2730451af1e5996228aeb7ca3dd,Nepali,https://open.spotify.com/track/00JHGxLXYhPMC4KygkO6Ef
+Birsiney Hau Ki,Birsiney Hau Ki,The Elements,null,https://i.scdn.co/image/ab67616d0000b273b4e65dbf74fe87c48186c595,Nepali,https://open.spotify.com/track/0Ley2dKfWsTgMEZGES12Ep
+Hawaijahaj,Sajjan Raj Vaidya 2016 Releases,Sajjan Raj Vaidya,null,https://i.scdn.co/image/ab67616d0000b27363ab3d245ef5f337843d1634,Nepali,https://open.spotify.com/track/5PGtbjfmWEfKkj2XrYNSSo
+Bistarai,Bistarai,Rohit John Chettri,null,https://i.scdn.co/image/ab67616d0000b273d052ae750a791864b63db6bc,Nepali,https://open.spotify.com/track/1XsYFNdIsiFLt7qbQPsUKN
+Marijau2,Bholi,Bikki Gurung,null,https://i.scdn.co/image/ab67616d0000b27309d64fd6f288b34b6f1f4951,Nepali,https://open.spotify.com/track/0uvdI3JNU3xmkFy1ZACiRO
+Satayera,Maya Ma (2018 Compilation),Sushant KC,null,https://i.scdn.co/image/ab67616d0000b2730451af1e5996228aeb7ca3dd,Nepali,https://open.spotify.com/track/2gh6AIz47oWKu7uKOzmlI1
+Kasari Bhanu,Tuborg Open Sessions Season 1,Swoopna Suman,null,https://i.scdn.co/image/ab67616d0000b273828c2bf15dd0975c972aa708,Nepali,https://open.spotify.com/track/0xsthdj7Kbrl6vLcp6bSFp
+Pahaar,Pahaar,Sajjan Raj Vaidya,null,https://i.scdn.co/image/ab67616d0000b273f34f2114a256173c6d79a067,Nepali,https://open.spotify.com/track/1xujCcuUmdlnvWABZXwqC2
+Kholai Khola,Kholai Khola,Neetesh Jung Kunwar,null,https://i.scdn.co/image/ab67616d0000b273e33ccb95e40318ad3be9a591,Nepali,https://open.spotify.com/track/4KWWotE0IbxApQFNvtCegt
+Sapana Ko Mayalu,Sapana Ko Mayalu,The Elements,null,https://i.scdn.co/image/ab67616d0000b273ca2046ae87fb8a0900b6aa60,Nepali,https://open.spotify.com/track/79GohGFwMgoQrvDXGHi42x
+Flirty Maya,NJK 2018,Neetesh Jung Kunwar,null,https://i.scdn.co/image/ab67616d0000b273f22c04aff8838756b33283e7,Nepali,https://open.spotify.com/track/0l57iePpa93L0rC7W042kN
+Ram Sailee - Ode To My Father,Sketches of Darjeeling,Bipul Chettri,null,https://i.scdn.co/image/ab67616d0000b2731667b84ec8ae3d562d2cf1d4,Nepali,https://open.spotify.com/track/4f4NAym3a1cwDslRX39WAj
+Aaudai Jaadai (Timro Nyano),Rush,The Uglyz,null,https://i.scdn.co/image/ab67616d0000b27344ad2d3681218ca28d5867f2,Nepali,https://open.spotify.com/track/3JSbiTyBHJhOFIakoCNLZr
+La La La La,Blue Up High,Bluesss,null,https://i.scdn.co/image/ab67616d0000b273b75ece49738c8710907c1ebf,Nepali,https://open.spotify.com/track/09E7K1TC0Z7IU7aFodet5N
+Nischal,Atti Bhayo,Albatross,null,https://i.scdn.co/image/ab67616d0000b273e1ce6eb15b326f0faba22207,Nepali,https://open.spotify.com/track/5F3vGwldN4pLHUNyBR2JjU
+Khai,Bimbaakash,Bartika Eam Rai,null,https://i.scdn.co/image/ab67616d0000b2738555ac0ffb551f30d2dcbbb0,Nepali,https://open.spotify.com/track/5Ea6BdX52O1Rt4BNnAEQNw
+Khaseka Tara,Jo Jas Sanga Sambandhit Chha,Albatross,null,https://i.scdn.co/image/ab67616d0000b2734082d8b7b9b6752fe3bac19f,Nepali,https://open.spotify.com/track/5Kdh3c9IicNHC5T5zbuBwa
+Maya Pirati,Kabaddi Kabaddi Kabaddi (Original Motion Picture Soundtrack),Kali Prasad Baskota,null,https://i.scdn.co/image/ab67616d0000b2730a02bfdea164a81f890d4673,Nepali,https://open.spotify.com/track/27sc5B8bxsp3Fn8RPEaNK5
+Sangai Bachauna,Monkey Temple Nepal,Monkey Temple Nepal,null,https://i.scdn.co/image/ab67616d0000b273a09808880956734e78db1534,Nepali,https://open.spotify.com/track/5shSZpogWRjnSUUUks3nQq
+Kheladi,Kheladi,Sushant KC,null,https://i.scdn.co/image/ab67616d0000b2732fe52bc5a2ffe525d28313f1,Nepali,https://open.spotify.com/track/2c5SddjkahATG7IlM4ecim
+Taal Ko Pani,Bheda Ko Oon Jasto,Nepathya,null,https://i.scdn.co/image/ab67616d0000b27362f9dfafe3122f6884e17a5c,Nepali,https://open.spotify.com/track/57Q0iFGcFceluUdzjHSfBJ
+Ko Hau Timi (OST First Love),Very Best of Karma,Karma Band,null,https://i.scdn.co/image/ab67616d0000b273c6615bd53c9d83a019df2ba3,Nepali,https://open.spotify.com/track/4KbLPhbLzEdc4lMvgkAIdH
+B.L.Y.H.L,B.L.Y.H.L,Sajjan Raj Vaidya,null,https://i.scdn.co/image/ab67616d0000b273b9962324090575830ad8ee1f,Nepali,https://open.spotify.com/track/4j6mOlHxSQxNoCwohotx6s
+Kaha Hola Ghar,Very Best of Karma,Karma Band,null,https://i.scdn.co/image/ab67616d0000b273c6615bd53c9d83a019df2ba3,Nepali,https://open.spotify.com/track/56S05UYB02PdnNibVZG0Tl
+Kuraakaani,Kuraakaani,Sajjan Raj Vaidya,null,https://i.scdn.co/image/ab67616d0000b273a086f4ac7f8e338e38bbe903,Nepali,https://open.spotify.com/track/4tQU3h1fKbxPofhHiasvzw
+Mayaloo,Sajjan Raj Vaidya 2016 Releases,Sajjan Raj Vaidya,null,https://i.scdn.co/image/ab67616d0000b27363ab3d245ef5f337843d1634,Nepali,https://open.spotify.com/track/1E9dwbizzW4BTzWyqfX3F0
+Hamro Nepalma,NJK 2018,Neetesh Jung Kunwar,null,https://i.scdn.co/image/ab67616d0000b273f22c04aff8838756b33283e7,Nepali,https://open.spotify.com/track/2fe9C8rPdgmjIKljDZSdH1
+Junkeri,Maya,Bipul Chettri,null,https://i.scdn.co/image/ab67616d0000b273fe775959bcee00b90774cb63,Nepali,https://open.spotify.com/track/4LQPSiu5Ezao5HSSN7CeEs
+Sadhai Sadhai,Rock Yatra,Mantra,null,https://i.scdn.co/image/ab67616d0000b27322fdc46f6cc9211ae27176b0,Nepali,https://open.spotify.com/track/0V5rkAjtI0PFOymRgppds9
+Najeek,Bimbaakash,Bartika Eam Rai,null,https://i.scdn.co/image/ab67616d0000b2738555ac0ffb551f30d2dcbbb0,Nepali,https://open.spotify.com/track/6darP2PR5PxDHrQgCRO1Xo
+Jhari,Jhari,Yabesh Thapa,null,https://i.scdn.co/image/ab67616d0000b27311f5e62d819ffdde81c183d7,Nepali,https://open.spotify.com/track/2GsqSu0d31eTz4o5PESDWV
+Timi Bhane,Jo Jas Sanga Sambandhit Chha,Albatross,null,https://i.scdn.co/image/ab67616d0000b2734082d8b7b9b6752fe3bac19f,Nepali,https://open.spotify.com/track/2nDAf3plZCm18W8i20hpQ8
+Nachaheko Hoina Timilai,The Edge,The Edge,null,https://i.scdn.co/image/ab67616d0000b273e282bd4935eb68bc9ad6ce51,Nepali,https://open.spotify.com/track/0Jq2UIIfiDBspLHs5FUhUa
+Syndicate,Syndicate - Single,Bipul Chettri,null,https://i.scdn.co/image/ab67616d0000b2730ba0e75dfe96f4e9b6b12ab8,Nepali,https://open.spotify.com/track/0Ai5lxcQ7WfxLtZn6h9PG1
+Phone Ko No. ?,Phone Ko No. ?,Sushant KC,null,https://i.scdn.co/image/ab67616d0000b273d4eff9df69c1d11126e5c888,Nepali,https://open.spotify.com/track/2ifQ55nXPn6xhX4Vzs4I5W
+Fakauna Ma,Fakauna Ma,Sushant KC,null,https://i.scdn.co/image/ab67616d0000b27321d66dd280aaa52419e85568,Nepali,https://open.spotify.com/track/1eLIWZZt7AIXgLLiGOl4hq
+Gahiro,Monkey Temple Nepal,Monkey Temple Nepal,null,https://i.scdn.co/image/ab67616d0000b273a09808880956734e78db1534,Nepali,https://open.spotify.com/track/5PBmMWG5LWmAtriB9ehl8B
+Aashish,Aashish - Single,Bipul Chettri,null,https://i.scdn.co/image/ab67616d0000b2736b90d96da774555e3db159de,Nepali,https://open.spotify.com/track/5SDmQxd4wO7fe9kbap9daT
+Yaad Ma Rakhnechhu,Yaad Ma Rakhnechhu,Swoopna Suman,null,https://i.scdn.co/image/ab67616d0000b273848ff97bb712f5eec4b41d2f,Nepali,https://open.spotify.com/track/6jVAIhycdjgEDu2QnyGr0f
+Sirfula Siraima,Sirfula Siraima,Nepathya,null,https://i.scdn.co/image/ab67616d0000b2738e7996962f2709f8e70e154e,Nepali,https://open.spotify.com/track/5MuQR46Qb20BO7YxYGbtQq
+Tesaile Hidey Ma,Tesaile Hidey Ma,The Elements,null,https://i.scdn.co/image/ab67616d0000b273921ede0181b88a412b7e5ef1,Nepali,https://open.spotify.com/track/1C7tUzqINjSRXcNsCRRKUA
+Aankhama,Samarpan,Nabin K Bhattarai,null,https://i.scdn.co/image/ab67616d0000b273330b1164149d5c07184196c7,Nepali,https://open.spotify.com/track/2Zej2csiUAJABv8FYgqm1k
+Timile Herda,Samarpan,Nabin K Bhattrai,null,https://i.scdn.co/image/ab67616d0000b2736cdeeb50f0de4a4ee7960e47,Nepali,https://open.spotify.com/track/5BayTXwC8GSqUA2zE0f9kc
+Siri Ma SIri,manchheko Maya,Narayan Gopal,null,https://i.scdn.co/image/ab67616d0000b2735a4467cd4b5f9ec784d502e5,Nepali,https://open.spotify.com/track/6rOxnFPMH9tKw8HYGfZgvx
+Ma Sanga Hidideu,Ma Sanga Hidideu,Kelsang Shrestha,null,https://i.scdn.co/image/ab67616d0000b273f7cb87cb4ad56fc6ca452300,Nepali,https://open.spotify.com/track/5OyxK1txYrrHTnBN8DCuww
+Jalai Mai,Jalai Mai,Arthur Gunn,null,https://i.scdn.co/image/ab67616d0000b273884b9d2ba6cf1d8c2e4909ce,Nepali,https://open.spotify.com/track/3AlPYaipT0XV3i981dOZt3
+Karnali (The River),Karnali (The River),Arthur Gunn,null,https://i.scdn.co/image/ab67616d0000b2739cbf40ffa94c062405c06e4c,Nepali,https://open.spotify.com/track/2B9IrMws4sM6NfJiBtxvOa
+Mann Ka Bhawana,Mann Ka Bhawana,Apurva Tamang,null,https://i.scdn.co/image/ab67616d0000b273e52c068b0726f231a4a99a39,Nepali,https://open.spotify.com/track/3GkEHnWJvWbd8WTq2Ih5Sw
+Sadhai Sadhai,Mantra 20th Anniversary Special Edition,Mantra Band,null,https://i.scdn.co/image/ab67616d0000b2737098d00a2392882bbd379403,Nepali,https://open.spotify.com/track/7BiYEnfjoOj6pGxWDu0f4N
+Ranga,Ranga,Rockheads,null,https://i.scdn.co/image/ab67616d0000b27327c36da679ebe098c3c6def2,Nepali,https://open.spotify.com/track/4e9x7bJgI5uyu8zozFL9Mm
+Drishya,Drishya,Apurva Tamang,null,https://i.scdn.co/image/ab67616d0000b273df3ca70d0ddc54748ef0fc07,Nepali,https://open.spotify.com/track/02sxVeper5EXqH0FanH8cG
+Timrai Tira,Timrai Tira - Single,Apurva Tamang,null,https://i.scdn.co/image/ab67616d0000b273987f2d66eeed5187c96042c0,Nepali,https://open.spotify.com/track/1ohiKweD0FTIs7WuEUnxJr
+Herda Herdai,Blue Figments,Sushant KC,null,https://i.scdn.co/image/ab67616d0000b2739e637c85c7fabf45e519a02d,Nepali,https://open.spotify.com/track/5GlgODfVHdkL3be4BytfdH
+Sathi,Sathi,Sushant KC,null,https://i.scdn.co/image/ab67616d0000b273c75480145c17543744339c51,Nepali,https://open.spotify.com/track/5QSxwHGT5sxyhDmTPJhbho
+Narisawna,Roka Yo Samay,Tribal Rain,null,https://i.scdn.co/image/ab67616d0000b273698de3a9f0f9794f7760ac7d,Nepali,https://open.spotify.com/track/7pNzZIVe1aTino5pgfQtlg
+Purana Kura,Purana Kura,Ulto Pulto,null,https://i.scdn.co/image/ab67616d0000b273c354bee8197c185f934eff74,Nepali,https://open.spotify.com/track/3KDuPMjfU8Rx6mqiPpyKMM
+Dekhe Timilai,A Decade,The Axe,null,https://i.scdn.co/image/ab67616d0000b273276eda256997a71e2d130f5a,Nepali,https://open.spotify.com/track/1BgKj3h4uXMAnojzoL5J2b
+Harauna Mancha,Kids in Love,Ulto Pulto,null,https://i.scdn.co/image/ab67616d0000b273ff7c5096669ceb3b63a556db,Nepali,https://open.spotify.com/track/5UfCLF30NPHs534qeDeDRY
+Dhaka Topi,Dhaka Topi,The Elements,null,https://i.scdn.co/image/ab67616d0000b273f99cc5382d27f2cf5ac5c5d3,Nepali,https://open.spotify.com/track/4TtIlHtkTfrqtUL95h0Nj0
+Anountho Mutu,Mooskaan,Sajjan Raj Vaidya,null,https://i.scdn.co/image/ab67616d0000b27360209e39f19991a7b1b58c29,Nepali,https://open.spotify.com/track/01X80L2kxCSfyclTCbpfX2
+Satayera,Gorkhali Extreme,GXSOUL,null,https://i.scdn.co/image/ab67616d0000b2730b06714c8abd647fa186467c,Nepali,https://open.spotify.com/track/5GN1D207XKDFHlOxL9n4f5
+Ultaa Paailaa,Ultaa Paailaa,Sajjan Raj Vaidya,null,https://i.scdn.co/image/ab67616d0000b273f756f43daae2c73063dc2cb4,Nepali,https://open.spotify.com/track/7BAkWCHoI417qAdHyy1YUH
+Birsiney Hau Ki,Tuborg Open Sessions Season 1,The Elements,null,https://i.scdn.co/image/ab67616d0000b273828c2bf15dd0975c972aa708,Nepali,https://open.spotify.com/track/0Ld5Co6R4wap3qriDeKBSq
+Lukaamaari,Lukaamaari,Sajjan Raj Vaidya,null,https://i.scdn.co/image/ab67616d0000b273d8e68f6d571723a7982272d1,Nepali,https://open.spotify.com/track/6PgAZFD8x5KwV0tKLkm4gf
+Hindda Hinddai,Pinjada Ko Suga,Adrian Pradhan,null,https://i.scdn.co/image/ab67616d0000b2730fea7d224e5dbf0ef22c4be6,Nepali,https://open.spotify.com/track/6RJQggQa9vSpeRkcYs4iRw
+Kaile Vetne Khai 2 (Nyasro),Kaile Vetne Khai 2 (Nyasro),Almoda Rana Uprety,null,https://i.scdn.co/image/ab67616d0000b273281461d337befed5759eddca,Nepali,https://open.spotify.com/track/4dUpCzqv7LXAbxrSVEQO2Z
+Kati Baschau Maiti Kai..,Jharana Sahar,Diwas Gurung,null,https://i.scdn.co/image/ab67616d0000b273308912460a86ef180378e4a9,Nepali,https://open.spotify.com/track/5nRw1VV5J5HO978q857lJa
+Oiliyeko Phool,Oiliyeko Phool,The Elements,null,https://i.scdn.co/image/ab67616d0000b273214f8303ae5264492e45fe46,Nepali,https://open.spotify.com/track/7kymY0GIlosbfjewAXDxPV
+Pahilo Junima,Satabdi,1974 A.D,null,https://i.scdn.co/image/ab67616d0000b27310b0a9a9481457f21aabcc96,Nepali,https://open.spotify.com/track/779r3r3TBFvzXu8OSNvcpS
+Deorali Darah,Sketches of Darjeeling,Bipul Chettri,null,https://i.scdn.co/image/ab67616d0000b2731667b84ec8ae3d562d2cf1d4,Nepali,https://open.spotify.com/track/3xlmmlKbhptoMnmtFJtP4r
+Indreni,Indreni,Nickofficial,null,https://i.scdn.co/image/ab67616d0000b273e28072ecbdcbcdaf2a32e0a4,Nepali,https://open.spotify.com/track/46FStXKCJbiAJUtcEV2BWB
+Jani Na Jani,Jani Na Jani,Oasis Thapa,null,https://i.scdn.co/image/ab67616d0000b273f2774cf05b55e1cf9d52bebc,Nepali,https://open.spotify.com/track/5YWHvylXFLEDnzHBmidfwn
+Banideu,Retake,Garage Music,null,https://i.scdn.co/image/ab67616d0000b27339f7a0732baf1fa294d3de1e,Nepali,https://open.spotify.com/track/5lLah08w0B5XLOsMM75Am0
+Perfect,÷ (Deluxe),Ed Sheeran,null,https://i.scdn.co/image/ab67616d0000b273ba5db46f4b838ef6027e6f96,English,https://open.spotify.com/track/0tgVpDi06FyKpA1z0VMD4v
+Let Me Down Slowly,Narrated For You,Alec Benjamin,null,https://i.scdn.co/image/ab67616d0000b273459d675aa0b6f3b211357370,English,https://open.spotify.com/track/2qxmye6gAegTMjLKEBoR3d
+Happier,÷ (Deluxe),Ed Sheeran,null,https://i.scdn.co/image/ab67616d0000b273ba5db46f4b838ef6027e6f96,English,https://open.spotify.com/track/2RttW7RAu5nOAfq6YFvApB
+Bad Day,Daniel Powter,Daniel Powter,null,https://i.scdn.co/image/ab67616d0000b273d5d74dc15f88ec6e02c7378d,English,https://open.spotify.com/track/0mUyMawtxj1CJ76kn9gIZK
+Accidentally In Love,Valentine's Day Mix,Counting Crows,null,https://i.scdn.co/image/ab67616d0000b27373dd7c7526a6870e6f89706a,English,https://open.spotify.com/track/5W10CyNhnCoIxUYfANwZqR
+Hey There Delilah,All That We Needed,Plain White T's,null,https://i.scdn.co/image/ab67616d0000b273beae6e69d6505fd379ef3081,English,https://open.spotify.com/track/4RCWB3V8V0dignt99LZ8vH
+Paper Rings,Lover,Taylor Swift,null,https://i.scdn.co/image/ab67616d0000b273e787cffec20aa2a396a61647,English,https://open.spotify.com/track/4y5bvROuBDPr5fuwXbIBZR
+You Belong With Me (Taylor’s Version),Fearless (Taylor's Version),Taylor Swift,null,https://i.scdn.co/image/ab67616d0000b273a48964b5d9a3d6968ae3e0de,English,https://open.spotify.com/track/1qrpoAMXodY6895hGKoUpA
+Treat You Better,Illuminate,Shawn Mendes,null,https://i.scdn.co/image/ab67616d0000b2731376b4b16f4bfcba02dc571b,English,https://open.spotify.com/track/3QGsuHI8jO1Rx4JWLUh9jd
+Better When I'm Dancin',Better When I'm Dancin',Meghan Trainor,null,https://i.scdn.co/image/ab67616d0000b273a348cd1b2496b47254acc74b,English,https://open.spotify.com/track/5k5fWendNngd89O8JKoE8L
+"Sit Still, Look Pretty",Pitch Perfect 3 (Original Motion Picture Soundtrack),The New Barden Bellas,null,https://i.scdn.co/image/ab67616d0000b27342ab4e36136073ce70675e78,English,https://open.spotify.com/track/0R3VceNdOWRvcYPuv7Rwr9
+"Honey, I'm Good.",Magazines Or Novels,Andy Grammer,null,https://i.scdn.co/image/ab67616d0000b27308387bff707fcd5318f0adb0,English,https://open.spotify.com/track/4MflGTO2ZTcSQ12bWcyRgI
+Shut Up and Dance,TALKING IS HARD,WALK THE MOON,null,https://i.scdn.co/image/ab67616d0000b27343294cfa2688055c9d821bf3,English,https://open.spotify.com/track/4kbj5MwxO1bq9wjT5g9HaA
+Title,Title (Deluxe),Meghan Trainor,null,https://i.scdn.co/image/ab67616d0000b2733b11178cccd78ec77fc12dbc,English,https://open.spotify.com/track/0k5hoseEJnCAbpRh38dNoI
+What Makes You Beautiful,Up All Night,One Direction,null,https://i.scdn.co/image/ab67616d0000b2734a5584795dc73860653a9a3e,English,https://open.spotify.com/track/4cluDES4hQEUhmXj6TXkSo
+Like I'm Gonna Lose You (feat. John Legend),Title (Deluxe),Meghan Trainor,null,https://i.scdn.co/image/ab67616d0000b2733b11178cccd78ec77fc12dbc,English,https://open.spotify.com/track/2YlZnw2ikdb837oKMKjBkW
+All About That Bass,Title (Deluxe),Meghan Trainor,null,https://i.scdn.co/image/ab67616d0000b2733b11178cccd78ec77fc12dbc,English,https://open.spotify.com/track/5jE48hhRu8E6zBDPRSkEq7
+There's Nothing Holdin' Me Back,Illuminate (Deluxe),Shawn Mendes,null,https://i.scdn.co/image/ab67616d0000b273ea3ef7697cfd5705b8f47521,English,https://open.spotify.com/track/7JJmb5XwzOO8jgpou264Ml
+2002,Speak Your Mind (Deluxe),Anne-Marie,null,https://i.scdn.co/image/ab67616d0000b27338aae75dc37fb42457866ffd,English,https://open.spotify.com/track/2BgEsaKNfHUdlh97KmvFyo
+Symphony (feat. Zara Larsson),What Is Love? (Deluxe Edition),Clean Bandit,null,https://i.scdn.co/image/ab67616d0000b27337fb0680110fbb107740de5d,English,https://open.spotify.com/track/72gv4zhNvRVdQA0eOenCal
+Payphone,Overexposed Track By Track,Maroon 5,null,https://i.scdn.co/image/ab67616d0000b273fc8633e22a7dba6aab817bff,English,https://open.spotify.com/track/1XGmzt0PVuFgQYYnV2It7A
+Somebody To You,Meet The Vamps,The Vamps,null,https://i.scdn.co/image/ab67616d0000b2739f89b8390933e9ccb3673c89,English,https://open.spotify.com/track/6VrLYoQKdhu1Jruei06t65
+Blank Space,1989 (Deluxe),Taylor Swift,null,https://i.scdn.co/image/ab67616d0000b27352b2a3824413eefe9e33817a,English,https://open.spotify.com/track/1u8c2t2Cy7UBoG4ArRcF5g
+Angel Baby,Angel Baby,Troye Sivan,null,https://i.scdn.co/image/ab67616d0000b273a16846601495c936a703c58e,English,https://open.spotify.com/track/3wlLknnMtD8yZ0pCtCeeK4
+Night Changes,FOUR (Deluxe),One Direction,null,https://i.scdn.co/image/ab67616d0000b273d304ba2d71de306812eebaf4,English,https://open.spotify.com/track/5O2P9iiztwhomNh8xkR9lJ
+Stitches,Handwritten,Shawn Mendes,null,https://i.scdn.co/image/ab67616d0000b27375bd5306fb4669a15ee74eff,English,https://open.spotify.com/track/3zkWCteF82vJwv0hRLba76
+Perfect,Made In The A.M. (Deluxe Edition),One Direction,null,https://i.scdn.co/image/ab67616d0000b273241e4fe75732c9c4b49b94c3,English,https://open.spotify.com/track/3NLnwwAQbbFKcEcV8hDItk
+Wildest Dreams,1989,Taylor Swift,null,https://i.scdn.co/image/ab67616d0000b273b7e976d2b35c767f9012cb72,English,https://open.spotify.com/track/3fVnlF4pGqWI9flVENcT28
+Classic,MKTO,MKTO,null,https://i.scdn.co/image/ab67616d0000b2739474419f15773875a495eed3,English,https://open.spotify.com/track/6FE2iI43OZnszFLuLtvvmg
+If I Can't Have You,Shawn Mendes (Deluxe),Shawn Mendes,null,https://i.scdn.co/image/ab67616d0000b273c820f033bd82bef4355d1563,English,https://open.spotify.com/track/2bT1PH7Cw3J9p3t7nlXCdh
+Rude,Don't Kill the Magic,MAGIC!,null,https://i.scdn.co/image/ab67616d0000b273604f8ac39f15d287e251f193,English,https://open.spotify.com/track/6RtPijgfPKROxEzTHNRiDp
+Cups (Pitch Perfect’s “When I’m Gone”) - Pop Version,Cups (Pitch Perfect’s “When I’m Gone”),Anna Kendrick,null,https://i.scdn.co/image/ab67616d0000b273bf912e74770477b7464d16b1,English,https://open.spotify.com/track/2sCl0FFOzZSmYZs90zOpd1
+Fall In Love Alone,Fall In Love Alone,Stacey Ryan,null,https://i.scdn.co/image/ab67616d0000b273c0e833f8baa95fdcbcc4f65a,English,https://open.spotify.com/track/5xwBIieMMFUmLDgvG4DjFe
+High School in Jakarta,Nicole,NIKI,null,https://i.scdn.co/image/ab67616d0000b273770eeb0ee1c91983b1ba4a10,English,https://open.spotify.com/track/1zxfRSZcaonV1VXcY0PgY5
+Come Inside Of My Heart,CLAPCLAPCLAP!,IV Of Spades,null,https://i.scdn.co/image/ab67616d0000b273144a03b07d6f561d4546a3f8,English,https://open.spotify.com/track/3Eb5sztvEMa0Mqnb8DUAlU
+Made You Look,Takin' It Back,Meghan Trainor,null,https://i.scdn.co/image/ab67616d0000b2731a4f1ada93881da4ca8060ff,English,https://open.spotify.com/track/0QHEIqNKsMoOY5urbzN48u
+golden hour,this is what falling in love feels like (554Hz),JVKE,null,https://i.scdn.co/image/ab67616d0000b2730af4476af141051c728ee8b9,English,https://open.spotify.com/track/4yNk9iz9WVJikRFle3XEvn
+Bang!,OK ORCHESTRA,AJR,null,https://i.scdn.co/image/ab67616d0000b2730f0e7900a102aaa70ed30d3e,English,https://open.spotify.com/track/2I2AqFb0f9UNnolWc2MafC
+あの夢をなぞって,あの夢をなぞって,YOASOBI,null,https://i.scdn.co/image/ab67616d0000b2730f46d80794891bde2dcbf1a8,English,https://open.spotify.com/track/4BE1OloRc9xwjyqA4wFFuN
+Cake By The Ocean,DNCE,DNCE,null,https://i.scdn.co/image/ab67616d0000b2738d0a75346badc30c8b845be9,English,https://open.spotify.com/track/76hfruVvmfQbw0eYn1nmeC
+Locked Away,Would You Still Love Me the Same (Will You Tell Me Honestly),Adam Lang,null,https://i.scdn.co/image/ab67616d0000b273a706d7c06cda877fa04f22f8,English,https://open.spotify.com/track/2XSCXW31rOKM6MsNrGJTKi
+Sunroof,Sunroof,Nicky Youre,null,https://i.scdn.co/image/ab67616d0000b2732d03cfe61f9e398fa2f68c65,English,https://open.spotify.com/track/4h4QlmocP3IuwYEj2j14p8
+Light Switch,CHARLIE,Charlie Puth,null,https://i.scdn.co/image/ab67616d0000b27335d2e0ed94a934f2cc46fa49,English,https://open.spotify.com/track/1jEBSDN5vYViJQr78W7jr2
+Ghost,Justice,Justin Bieber,null,https://i.scdn.co/image/ab67616d0000b273e6f407c7f3a0ec98845e4431,English,https://open.spotify.com/track/6I3mqTwhRpn34SLVafSH7G
+SNAP - High and Fast,SNAP PACK,Rosa Linn,null,https://i.scdn.co/image/ab67616d0000b2732cb2bc4581ddf117470128ff,English,https://open.spotify.com/track/46cdw28EXOhDPnD1emDC6T
+Daydreamin',Yours Truly,Ariana Grande,null,https://i.scdn.co/image/ab67616d0000b273ea28881e9e363244a4a2347b,English,https://open.spotify.com/track/2CcQDI2IDhHbmBIFup58JE
+Dandelions,Safe Haven,Ruth B.,null,https://i.scdn.co/image/ab67616d0000b27397e971f3e53475091dc8d707,English,https://open.spotify.com/track/2eAvDnpXP5W0cVtiI0PUxV
+Teenage Dream,Teenage Dream,Stephen Dawes,null,https://i.scdn.co/image/ab67616d0000b273a153dcc6e03e40b09c4d0a8f,English,https://open.spotify.com/track/3Y2MvObZdPakD1X71KOxCD
+Kill Bill,SOS,SZA,null,https://i.scdn.co/image/ab67616d0000b27370dbc9f47669d120ad874ec1,English,https://open.spotify.com/track/3OHfY25tqY28d16oZczHc8
+death bed (coffee for your head),death bed (coffee for your head),Powfu,null,https://i.scdn.co/image/ab67616d0000b273bf01fd0986a195d485922167,English,https://open.spotify.com/track/7eJMfftS33KTjuF7lTsMCx
+Atlantis - Sped Up Version,Atlantis,Seafret,null,https://i.scdn.co/image/ab67616d0000b27339cfb5e035c2d5ff6e22c461,English,https://open.spotify.com/track/72VBmMUTEVWFcDUVgMbqo0
+Every Summertime,Every Summertime,NIKI,null,https://i.scdn.co/image/ab67616d0000b273e81fd3b9a7230db447f38182,English,https://open.spotify.com/track/68HocO7fx9z0MgDU0ZPHro
+Way Back Home (feat. Conor Maynard) - Sam Feldt Edit,Way Back Home (feat. Conor Maynard) [Sam Feldt Edit],SHAUN,null,https://i.scdn.co/image/ab67616d0000b27391994452af66b672954b6eb4,English,https://open.spotify.com/track/1ZLrDPgR7mvuTco3rQK8Pk
+At My Worst,PINK PLANET,Pink Sweat$,null,https://i.scdn.co/image/ab67616d0000b27375af9fb0fa8dc8f3adef6905,English,https://open.spotify.com/track/2MJz8BxxMsERULatmBikDH
+comethru,"summer,",Jeremy Zucker,null,https://i.scdn.co/image/ab67616d0000b273cb16227d90152c2a5022bba1,English,https://open.spotify.com/track/18uwL0vNUanqZH0ro2QcOP
+"10,000 Hours (with Justin Bieber)",Good Things,Dan + Shay,null,https://i.scdn.co/image/ab67616d0000b2735d847661ee74db6591c4a30b,English,https://open.spotify.com/track/4j5ffIFh7bFT7GZciP1TCy
+Every Second,Every Second,Mina Okabe,null,https://i.scdn.co/image/ab67616d0000b273fc03b97c30ce11e30e65e389,English,https://open.spotify.com/track/6dquCx5KAW5jCgGgoTlghL
+Right Now,Midnight Memories (Deluxe),One Direction,null,https://i.scdn.co/image/ab67616d0000b2732f76b797c382bedcafdf45e1,English,https://open.spotify.com/track/1dQQ2QlnvXUehsRUrukKmf
+Here With Me,Here With Me,d4vd,null,https://i.scdn.co/image/ab67616d0000b273efbe96040319db682b438f11,English,https://open.spotify.com/track/78Sw5GDo6AlGwTwanjXbGh
+Make You Mine,Make You Mine,PUBLIC,null,https://i.scdn.co/image/ab67616d0000b2730d0621554b1c6c9dbf3556be,English,https://open.spotify.com/track/5iFwAOB2TFkPJk8sMlxP8g
+At My Worst,The Prelude,Pink Sweat$,null,https://i.scdn.co/image/ab67616d0000b27387bb1da05f3491eea3401de5,English,https://open.spotify.com/track/0ri0Han4IRJhzvERHOZTMr
+Here's Your Perfect,Here's Your Perfect,Jamie Miller,null,https://i.scdn.co/image/ab67616d0000b2730f77b506b28aa892702cc101,English,https://open.spotify.com/track/2aTKrdenCq5qBOoJPFdn4P
+I Ain't Worried,"I Ain’t Worried (Music From The Motion Picture ""Top Gun: Maverick"")",OneRepublic,null,https://i.scdn.co/image/ab67616d0000b273ec96e006b8bdfc582610ec13,English,https://open.spotify.com/track/4h9wh7iOZ0GGn8QVp4RAOB
+THE SHADE,WHO CARES?,Rex Orange County,null,https://i.scdn.co/image/ab67616d0000b2735b656d32ea6b0b9c54c2d2e0,English,https://open.spotify.com/track/1gH1h30wkQdd9zhY3j7a8T
+Wings,Fire Within (Deluxe),Birdy,null,https://i.scdn.co/image/ab67616d0000b2736cf816391f4d0c49d481ee1b,English,https://open.spotify.com/track/2Kz5qeXifBxE0zmuoVchlM
+Steal My Girl,FOUR (Deluxe),One Direction,null,https://i.scdn.co/image/ab67616d0000b273d304ba2d71de306812eebaf4,English,https://open.spotify.com/track/2Bs4jQEGMycglOfWPBqrVG
+Know Me Too Well,Know Me Too Well,New Hope Club,null,https://i.scdn.co/image/ab67616d0000b2739aa1a708fbf28913e48f273f,English,https://open.spotify.com/track/3evNCP0dfoI8lXvSF1tRnN
+Let Her Go,All the Little Lights (Deluxe),Passenger,null,https://i.scdn.co/image/ab67616d0000b273eb0b18cce8b7f5c9fc1579e7,English,https://open.spotify.com/track/2pUpNOgJBIBCcjyQZQ00qU
+All of Me,Love In The Future (Expanded Edition),John Legend,null,https://i.scdn.co/image/ab67616d0000b27394c9217a398f5174757c0c78,English,https://open.spotify.com/track/3U4isOIWM3VvDubwSI3y7a
+Thumbs,EVOLution,Sabrina Carpenter,null,https://i.scdn.co/image/ab67616d0000b273d6641a0296d8d09e416e0acd,English,https://open.spotify.com/track/6WC5fhc9XMaCrUNKNjm9xE
+Am I Wrong,Black Star Elephant,Nico & Vinz,null,https://i.scdn.co/image/ab67616d0000b273eb3c078694b007169dab4a4f,English,https://open.spotify.com/track/1fidCEsYlaVE3pHwKCvpFZ
+I Want It That Way,Millennium,Backstreet Boys,null,https://i.scdn.co/image/ab67616d0000b2732160c02bc56f192df0f4986b,English,https://open.spotify.com/track/47BBI51FKFwOMlIiX6m8ya
+Low (feat. T-Pain),Mail on Sunday,Flo Rida,null,https://i.scdn.co/image/ab67616d0000b273f9bd7a6c772ac496015be3f8,English,https://open.spotify.com/track/0CAfXk7DXMnon4gLudAp7J
+Blinding Lights,After Hours,The Weeknd,null,https://i.scdn.co/image/ab67616d0000b2738863bc11d2aa12b54f5aeb36,English,https://open.spotify.com/track/0VjIjW4GlUZAMYd2vXMi3b
+Say So,Hot Pink,Doja Cat,null,https://i.scdn.co/image/ab67616d0000b273f14aa81116510d3a6df8432b,English,https://open.spotify.com/track/3Dv1eDb0MEgF93GpLXlucZ
+Levitating (feat. DaBaby),Future Nostalgia,Dua Lipa,null,https://i.scdn.co/image/ab67616d0000b2732172b607853fa89cefa2beb4,English,https://open.spotify.com/track/5nujrmhLynf4yMoMtj8AQF
+Sure Thing - Sped Up,Sure Thing (Sped Up),Miguel,null,https://i.scdn.co/image/ab67616d0000b273f2a39a7b2f9b4eb6256d3787,English,https://open.spotify.com/track/559SdaPI7mqy9IQiscuaMj
+Cheap Thrills (feat. Sean Paul),This Is Acting,Sia,null,https://i.scdn.co/image/ab67616d0000b273fc36b265066a58e205ecbd5c,English,https://open.spotify.com/track/378iszndTZAR4dH8kwsLC6
+Thank You,No Angel,Dido,null,https://i.scdn.co/image/ab67616d0000b2733e5cbf3b3ac5905cb68377d5,English,https://open.spotify.com/track/3yUcJwYu7fXAfqMj9krY6l
+Shower,Shower,Becky G,null,https://i.scdn.co/image/ab67616d0000b273f7f5503cfc6a54d31e65b112,English,https://open.spotify.com/track/3DmW6y7wTEYHJZlLo1r6XJ
+Sweetest Pie,Sweetest Pie,Megan Thee Stallion,null,https://i.scdn.co/image/ab67616d0000b2731325a9351844f7806a8309c5,English,https://open.spotify.com/track/7mFj0LlWtEJaEigguaWqYh
+About Damn Time,Special,Lizzo,null,https://i.scdn.co/image/ab67616d0000b273fe3b1b9cb7183a94e1aafd43,English,https://open.spotify.com/track/6HMtHNpW6YPi1hrw9tgF8P
+Secret Love Song (feat. Jason Derulo),Get Weird (Expanded Edition),Little Mix,null,https://i.scdn.co/image/ab67616d0000b273995994477ea1ae8097978bf8,English,https://open.spotify.com/track/6KHL1En9v6iNWjcs44mcmU
+Photograph,x (Deluxe Edition),Ed Sheeran,null,https://i.scdn.co/image/ab67616d0000b27313b3e37318a0c247b550bccd,English,https://open.spotify.com/track/1HNkqx9Ahdgi1Ixy2xkKkL
+Don't Blame Me (sped up + reverb) - Remix,Don't Blame Me (sped up + reverb) (Remix),Xanemusic,null,https://i.scdn.co/image/ab67616d0000b27362aea250a7f2d5d7b70294e1,English,https://open.spotify.com/track/1CECbPY2drn0xPxgKMJQBe
+Monsters,After Hours (Deluxe),Timeflies,null,https://i.scdn.co/image/ab67616d0000b273faa11136600eb67d1aa9d4fe,English,https://open.spotify.com/track/0hP4gyXuCEA0253P8LnXfw
+Heartbreak Anniversary,Heartbreak Anniversary,GIVĒON,null,https://i.scdn.co/image/ab67616d0000b273b0d2119e477ebbb543f19ed7,English,https://open.spotify.com/track/2QfznFotJNZmnIEYFdzE5T
+Everybody Wants To Rule The World,Songs From The Big Chair (Super Deluxe Edition),Tears For Fears,null,https://i.scdn.co/image/ab67616d0000b27322463d6939fec9e17b2a6235,English,https://open.spotify.com/track/4RvWPyQ5RL0ao9LPZeSouE
+Rewrite The Stars (with James Arthur & Anne-Marie),Rewrite The Stars (with James Arthur & Anne-Marie),James Arthur,null,https://i.scdn.co/image/ab67616d0000b273fdcd66dc526a25e1555ae81d,English,https://open.spotify.com/track/6mQLN3zRtAp6ovjusyYKrV
+One Kiss (with Dua Lipa),One Kiss (with Dua Lipa),Calvin Harris,null,https://i.scdn.co/image/ab67616d0000b273d09f96d82310d4d77c14c108,English,https://open.spotify.com/track/7ef4DlsgrMEH11cDZd32M6
+New Rules - Freedo Remix,New Rules (Remixes),Dua Lipa,null,https://i.scdn.co/image/ab67616d0000b273cfcad550a66c2256374b6bb5,English,https://open.spotify.com/track/6v5YfAj1plZ2Rbl9FzOOF5
+Attention - Oliver Heldens Remix,Attention (Acoustic + Remixes),Charlie Puth,null,https://i.scdn.co/image/ab67616d0000b273106e27ed45e687dba9584179,English,https://open.spotify.com/track/6OgJ4gmyE66Gjs8xDI3eAr
+AMAZING,WHO CARES?,Rex Orange County,null,https://i.scdn.co/image/ab67616d0000b2735b656d32ea6b0b9c54c2d2e0,English,https://open.spotify.com/track/3OM6qQmdFV6uy61GIqpRtf
+Best Part (feat. H.E.R.),Freudian,Daniel Caesar,null,https://i.scdn.co/image/ab67616d0000b2733138f891f3075c9c5d944037,English,https://open.spotify.com/track/1RMJOxR6GRPsBHL8qeC2ux
+"Sex, Drugs, Etc.",Chit Chat,Beach Weather,null,https://i.scdn.co/image/ab67616d0000b273d965622035c698fefc8c8a4a,English,https://open.spotify.com/track/7DbdUf8aHSYoliSjO6LZv6
+Boy's a liar Pt. 2,Boy's a liar Pt. 2,PinkPantheress,null,https://i.scdn.co/image/ab67616d0000b2739567e1aa41657425d046733b,English,https://open.spotify.com/track/6AQbmUe0Qwf5PZnt4HmTXv
+Sofia,Immunity,Clairo,null,https://i.scdn.co/image/ab67616d0000b27333ccb60f9b2785ef691b2fbc,English,https://open.spotify.com/track/7B3z0ySL9Rr0XvZEAjWZzM
+Magic In The Hamptons (feat. Lil Yachty),Magic In The Hamptons (feat. Lil Yachty),Social House,null,https://i.scdn.co/image/ab67616d0000b273013314e9861a2c4a796b2176,English,https://open.spotify.com/track/2Yer0p7uB2lVBUAtANuuQp
+Slipping Through My Fingers,The Visitors (Deluxe Edition),ABBA,null,https://i.scdn.co/image/ab67616d0000b27342678f54dfd1d5afb3eea19a,English,https://open.spotify.com/track/6TvxPS4fj4LUdjw2es4g21
+Do I Wanna Know?,AM,Arctic Monkeys,null,https://i.scdn.co/image/ab67616d0000b2734ae1c4c5c45aabe565499163,English,https://open.spotify.com/track/5FVd6KXrgO9B3JPmC8OPst

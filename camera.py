@@ -112,7 +112,7 @@ class VideoCamera(object):
 		gray=cv2.cvtColor(image,cv2.COLOR_BGR2GRAY)
 		face_rects=face_cascade.detectMultiScale(gray,1.3,5)
 		df1 = pd.read_csv(music_dist[show_text[0]])
-		df1 = df1[['Name','Album','Artist','Link','Image']]
+		df1 = df1[['Name','Album','Artist','Image']]
 		df1 = df1.head(15)
 		for (x,y,w,h) in face_rects:
 			cv2.rectangle(image,(x,y-50),(x+w,y+h+10),(0,255,0),2)
@@ -139,8 +139,8 @@ class VideoCamera(object):
 def music_rec():
 	# print('---------------- Value ------------', music_dist[show_text[0]])
 	df = pd.read_csv(music_dist[show_text[0]])
-	df = df[['Name','Album','Artist','Link','Image']]
-	df = df.head(90)
+	df = df[['Name','Album','Artist','Image','SpotifyURL']]
+	df = df.head(500)
 	return df
 	
 def real_time_emotion():
@@ -173,23 +173,27 @@ def emotion_rec(image):
 
 
 	# 
-def max_emotion_reccomendation():
-	emotion_list = []
-	cap1 = WebcamVideoStream(src=0).start()
-	for i in range(10):
-		time.sleep(0.5)
-		image = cap1.read()
-		[jpeg,emotion]=emotion_rec(image)
-		print(emotion)
-		if emotion is not None:
-			emotion_list.append(emotion)
-	print(emotion_list)
-	cap1.stop()
-	max_emotion = max(set(emotion_list), key = emotion_list.count) if emotion_list else "neutral"
-	if max_emotion == "neutral":
-		return max_emotion,None
-	# read music data from csv file
-	df = pd.read_csv('songs/'+max_emotion.lower()+'.csv')
-	df = df[['Name','Album','Artist','Link','Image']]
-	df = df.head(90)
-	return max_emotion,df 
+def max_emotion_reccomendation(emotion):
+    emotion_list = []
+    cap1 = WebcamVideoStream(src=0).start()
+    for i in range(10):
+        time.sleep(0.5)
+        image = cap1.read()
+        [jpeg, emotion] = emotion_rec(image)
+        print(emotion)
+        if emotion is not None:
+            emotion_list.append(emotion)
+    print(emotion_list)
+    cap1.stop()
+    
+    max_emotion = max(set(emotion_list), key=emotion_list.count) if emotion_list else "neutral"
+    if max_emotion == "neutral":
+        return max_emotion, None
+    
+    # ✅ Load all needed columns including SpotifyURL
+    df = pd.read_csv(f'songs/{max_emotion.lower()}.csv')
+    df = df[['Name', 'Album', 'Artist', 'Image', 'SpotifyURL','Language']]
+    df = df.head(500)
+    
+    return max_emotion, df
+

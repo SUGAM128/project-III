@@ -66,66 +66,121 @@ let playing_audios = [];
 
 displayPlaylist = (data) => {
   video.src = null;
+  lastDetectedEmotion = data.detected_emotion;
   emotionDisplay.textContent =
     data.detected_emotion == "neutral"
       ? "No Face detected"
       : data.detected_emotion;
   changeEmojiTo(data.detected_emotion);
-  console.log("data:", data);
+
+  const table = document.getElementById("playlist-table");
+  const videoPage = document.querySelector(".camera-container");
+  const playlistpage = document.querySelector(".playlist-container");
+  const languageFilter = document.getElementById("languageFilter");
+
   videoPage.style.display = "none";
   playlistpage.style.display = "block";
-  let table = document.getElementById("playlist-table");
-  data.music_data.forEach((music) => {
-    let datarow = document.createElement("tr");
-    datarow.className = "playlist-row mt-1 mb-1";
 
-    let namecell = document.createElement("td");
-    namecell.textContent = music.Name;
+  let allTracks = data.music_data;
 
-    let artistcell = document.createElement("td");
-    artistcell.textContent = music.Artist;
+  function renderFilteredTracks() {
+    table.querySelector("tbody").innerHTML = "";
 
-    let albumcell = document.createElement("td");
-    albumcell.textContent = music.Album;
+    const selectedLanguage = languageFilter?.value || "all";
 
-    let covercell = document.createElement("td");
+console.log("Available Languages:", allTracks.map(t => t.language));
+console.log("Selected Language:", selectedLanguage);
+
+const filteredTracks =
+  selectedLanguage === "all"
+    ? allTracks
+    : allTracks.filter((track) => {
+        return (
+          track.language &&
+          track.language.trim().toLowerCase() === selectedLanguage.trim().toLowerCase()
+        );
+      });
+
+
+    filteredTracks.forEach((music, index) => {
+      let datarow = document.createElement("tr");
+      datarow.className = "playlist-row mt-1 mb-1";
+
+      const playCell = document.createElement("td");
+      playCell.innerHTML = `
+  <a href="${music.SpotifyURL}" target="_blank" 
+     class="btn btn-success btn-sm d-flex align-items-center gap-1"
+     style="padding: 0.5rem 0.5rem; font-size: 1.0 rem; width: fit-content;">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/8/84/Spotify_icon.svg" 
+         alt="Spotify" style="width: 16px; height: 16px;" />
+    <span>Play</span>
+  </a>
+`;
+
+
+      const nameCell = document.createElement("td");
+      nameCell.textContent = music.Name;
+
+       let covercell = document.createElement("td");
     let cover = document.createElement("img");
     cover.src = music.Image;
     covercell.appendChild(cover);
-    cover.style.width = "50px";
-    cover.style.height = "50px";
+    cover.style.width = "70px";
+    cover.style.height = "70px";
     cover.style.borderRadius = "50%";
 
-    playBtn = document.createElement("button");
-    playBtn.className = "control-btn";
-    playBtn.addEventListener("click", (e) => {
-      let audio = new Audio(music.Link);
-      if (e.target.classList.contains("paused")) {
-        playing_audios.forEach((audio) => {
-          audio.pause();
-        });
-        e.target.classList.remove("paused");
-      } else {
-        playing_audios.forEach((audio) => {
-          audio.pause();
-        });
-        document.querySelectorAll(".paused").forEach((btn) => {
-          btn.classList.remove("paused");
-        });
-        playing_audios.push(audio);
-        audio.play();
-        e.target.classList.add("paused");
-      }
+      const artistCell = document.createElement("td");
+      artistCell.textContent = music.Artist;
+
+      const albumCell = document.createElement("td");
+      albumCell.textContent = music.Album;
+
+      const langCell = document.createElement("td");
+      langCell.textContent = music.language || "-";
+
+      const indexCell = document.createElement("td");
+      indexCell.textContent = index + 1;
+
+      datarow.appendChild(indexCell);
+      datarow.appendChild(playCell);
+      datarow.appendChild(covercell);
+      datarow.appendChild(nameCell);
+      datarow.appendChild(artistCell);
+      datarow.appendChild(albumCell);
+      datarow.appendChild(langCell);
+
+      table.querySelector("tbody").appendChild(datarow);
     });
-    controlPlaycell = document.createElement("td");
-    controlPlaycell.appendChild(playBtn);
+  }
 
-    datarow.appendChild(controlPlaycell);
-    datarow.appendChild(covercell);
-    datarow.appendChild(namecell);
-    datarow.appendChild(artistcell);
-    datarow.appendChild(albumcell);
+  if (languageFilter) {
+    languageFilter.removeEventListener("change", renderFilteredTracks); // Avoid double-bind
+    languageFilter.addEventListener("change", renderFilteredTracks);
+  }
 
-    table.appendChild(datarow);
-  });
+  renderFilteredTracks(); // Initial render
 };
+let shuffleButton = document.getElementById("shuffleButton");
+if (shuffleButton) {
+  shuffleButton.addEventListener("click", handleShuffleClick);
+}
+
+
+async function handleShuffleClick() {
+  if (!lastDetectedEmotion || lastDetectedEmotion === "neutral") {
+    alert("Please detect an emotion first before shuffling.");
+    return;
+  }
+
+  console.log("Shuffling songs...");
+  loader.style.display = "block";
+  shuffleButton.disabled = true;
+
+  const response = await fetch("/shuffle_recommendations");
+  const data = await response.json();
+
+  displayPlaylist(data);
+
+  loader.style.display = "none";
+  shuffleButton.disabled = false;
+}
