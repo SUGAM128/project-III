@@ -29,6 +29,11 @@ class EmotionHistory(db.Model):
 with app.app_context():
     db.create_all()
 
+
+
+
+
+
 headings = ("Name", "Album", "Artist")
 df1 = music_rec()
 # df1 = df1.head(15)
@@ -120,75 +125,148 @@ import random
  
 @app.route("/get_recommendations")
 def get_recommendations():
-    if 'user_id' not in session:
-        return jsonify({"error": "User not logged in"}), 401
-    emotion = session.get('last_emotion', 'neutral') 
-    detected_emotion, df1 = max_emotion_reccomendation(emotion)
+    try:
+        if 'user_id' not in session:
+            return jsonify({"error": "User not logged in"}), 401
 
-    # Save to history
-    new_history = EmotionHistory(user_id=session['user_id'], emotion=detected_emotion)
-    db.session.add(new_history)
-    db.session.commit()
+        is_shuffle = request.args.get("shuffle") == "1"
 
-    music_data = []
-    if df1 is not None and not df1.empty:
-        # Make sure 'language' column is present and normalized
-        if 'Language' not in df1.columns:
-            df1['Language'] = ""
-        df1.rename(columns={"Language": "language"}, inplace=True)
+        if is_shuffle:
+            detected_emotion = session.get('last_emotion', None)
+            if not detected_emotion:
+                return jsonify({"error": "No previous emotion detected for shuffle"}), 400
+        else:
+            session.pop('last_emotion', None)
+            detected_emotion, _ = max_emotion_reccomendation()
+            if not detected_emotion:
+                detected_emotion = 'neutral'
+            session['last_emotion'] = detected_emotion
 
-        df1['language'] = df1['language'].str.lower().str.strip()
+            new_history = EmotionHistory(user_id=session['user_id'], emotion=detected_emotion)
+            db.session.add(new_history)
+            db.session.commit()
 
-        # Sample 10 songs for each language
-        for lang in ['english', 'hindi', 'nepali']:
-            lang_df = df1[df1['language'] == lang]
-            sampled = lang_df.sample(n=min(10, len(lang_df)))
-            music_data.extend(sampled.to_dict(orient='records'))
+        # Fetch songs for detected emotion
+        _, df1 = max_emotion_reccomendation(emotion=detected_emotion)
 
-    return jsonify({
-        "detected_emotion": detected_emotion,
-        "music_data": music_data
-    })
-from flask import request, session, jsonify
+        music_data = []
+
+        if df1 is not None and not df1.empty:
+            if 'Language' not in df1.columns:
+                df1['Language'] = ""
+            df1.rename(columns={"Language": "language"}, inplace=True)
+            df1['language'] = df1['language'].str.lower().str.strip()
+
+            for lang in ['english', 'hindi', 'nepali']:
+                lang_df = df1[df1['language'] == lang]
+                sampled = lang_df.sample(n=min(10, len(lang_df)))
+                music_data.extend(sampled.to_dict(orient='records'))
+
+            # Log played songs (optional)
+            
+
+        return jsonify({
+            "detected_emotion": detected_emotion,
+            "music_data": music_data
+        })
+    except Exception as e:
+        import traceback
+        traceback.print_exc()
+        return jsonify({"error": "Internal server error", "details": str(e)}), 500
+
+# from flask import request, session, jsonify
 
 @app.route("/shuffle_recommendations")
 def shuffle_recommendations():
-    print("Shuffle API called")
     if 'user_id' not in session:
         return jsonify({"error": "User not logged in"}), 401
 
-    # Try to get emotion from request query param first
-    emotion = request.args.get('emotion')
-
-    # If no emotion sent, fallback to session emotion
-    if not emotion:
-        emotion = session.get('last_emotion')
-
-    if not emotion or emotion == "neutral":
+    detected_emotion = session.get('last_emotion')
+    if not detected_emotion or detected_emotion == "neutral":
         return jsonify({"detected_emotion": "neutral", "music_data": []})
 
-    # Update session with this emotion to keep in sync
-    session['last_emotion'] = emotion
+    # Fetch all songs for the detected emotion
+    _, df1 = max_emotion_reccomendation(emotion=detected_emotion)
+    if df1 is None or df1.empty:
+        return jsonify({"detected_emotion": detected_emotion, "music_data": []})
 
-    # Your existing recommendation function with the requested emotion
-    _, df1 = max_emotion_reccomendation(detected_emotion=emotion)
+    # Normalize language column
+    if 'Language' not in df1.columns:
+        df1['Language'] = ""
+    df1.rename(columns={"Language": "language"}, inplace=True)
+    df1['language'] = df1['language'].str.lower().str.strip()
 
-    music_data = []
-    if df1 is not None and not df1.empty:
-        if 'Language' not in df1.columns:
-            df1['Language'] = ""
-        df1.rename(columns={"Language": "language"}, inplace=True)
-        df1['language'] = df1['language'].str.lower().str.strip()
+    # Fetch previously shown song URLs for each language
+    shown_urls = session.get('shown_urls_by_language', {
+        "english": [],
+        "hindi": [],
+        "nepali": []
+    })
 
-        for lang in ['english', 'hindi', 'nepali']:
-            lang_df = df1[df1['language'] == lang]
-            sampled = lang_df.sample(n=min(10, len(lang_df)))
-            music_data.extend(sampled.to_dict(orient='records'))
+    final_songs = []
+
+    for lang in ['english', 'hindi', 'nepali']:
+        lang_df = df1[df1['language'] == lang]
+
+        # Filter out already shown songs for this language
+        unseen = lang_df[~lang_df['SpotifyURL'].isin(shown_urls.get(lang, []))]
+
+        # If not enough unseen, reset the list for this language
+        if len(unseen) < 10:
+            unseen = lang_df
+            shown_urls[lang] = []
+
+        # Sample 10 songs
+        sampled = unseen.sample(n=min(10, len(unseen)))
+        final_songs.extend(sampled.to_dict(orient='records'))
+
+        # Update shown URLs for this language
+        new_urls = sampled['SpotifyURL'].tolist()
+        shown_urls[lang].extend(new_urls)
+
+    # Save updated shown songs to session
+    session['shown_urls_by_language'] = shown_urls
 
     return jsonify({
-        "detected_emotion": emotion,
-        "music_data": music_data
+        "detected_emotion": detected_emotion,
+        "music_data": final_songs
     })
+
+
+@app.route("/get_history_with_songs")
+def get_history_with_songs():
+    if 'user_id' not in session:
+        return jsonify({"error": "User not logged in"}), 401
+
+    user_id = session['user_id']
+
+    # Fetch emotion history for user, order by timestamp descending
+    emotion_entries = EmotionHistory.query.filter_by(user_id=user_id).order_by(EmotionHistory.timestamp.desc()).all()
+
+    history_data = []
+
+    for entry in emotion_entries:
+        # Fetch played songs for this user and emotion, limit or filter by timestamp range if needed
+        songs = PlayedMusicHistory.query.filter_by(
+            user_id=user_id,
+            emotion=entry.emotion
+        ).order_by(PlayedMusicHistory.timestamp.asc()).limit(10).all()  # limit for example
+
+        songs_list = [{
+            "song_name": s.song_name,
+            "artist": s.artist,
+            "album": s.album,
+            "played_at": s.timestamp.strftime("%Y-%m-%d %H:%M:%S") if s.timestamp else None
+        } for s in songs]
+
+        history_data.append({
+            "emotion": entry.emotion,
+            "detected_at": entry.timestamp.strftime("%Y-%m-%d %H:%M:%S"),
+            "played_songs": songs_list
+        })
+
+    return jsonify(history_data)
+
 
 
 # from flask import render_template, session
@@ -198,7 +276,7 @@ def shuffle_recommendations():
 #     username = session.get('username')  # Assuming username is stored in session
 #     return render_template('dashboard.html', username=username)
 
-from flask import session, render_template
+# from flask import session, render_template
 
 # @app.route('/dashboard')
 # def dashboard():

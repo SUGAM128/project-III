@@ -173,27 +173,34 @@ def emotion_rec(image):
 
 
 	# 
-def max_emotion_reccomendation(emotion):
-    emotion_list = []
-    cap1 = WebcamVideoStream(src=0).start()
-    for i in range(10):
-        time.sleep(0.5)
-        image = cap1.read()
-        [jpeg, emotion] = emotion_rec(image)
-        print(emotion)
-        if emotion is not None:
-            emotion_list.append(emotion)
-    print(emotion_list)
-    cap1.stop()
-    
-    max_emotion = max(set(emotion_list), key=emotion_list.count) if emotion_list else "neutral"
-    if max_emotion == "neutral":
-        return max_emotion, None
-    
-    # ✅ Load all needed columns including SpotifyURL
-    df = pd.read_csv(f'songs/{max_emotion.lower()}.csv')
-    df = df[['Name', 'Album', 'Artist', 'Image', 'SpotifyURL','Language']]
-    df = df.head(500)
-    
-    return max_emotion, df
+def max_emotion_reccomendation(emotion=None):
+    if emotion is not None:
+        print(f"🟡 Using passed emotion: {emotion}")
+    else:
+        emotion_list = []
+        cap1 = WebcamVideoStream(src=0).start()
+        for i in range(10):
+            time.sleep(0.5)
+            image = cap1.read()
+            [jpeg, detected_emotion] = emotion_rec(image)
+            print(detected_emotion)
+            if detected_emotion is not None:
+                emotion_list.append(detected_emotion)
+        cap1.stop()
+
+        print("🟢 Detected emotions:", emotion_list)
+        emotion = max(set(emotion_list), key=emotion_list.count) if emotion_list else "neutral"
+
+    if emotion == "neutral":
+        return emotion, None
+
+    try:
+        df = pd.read_csv(f'songs/{emotion.lower()}.csv')
+        df = df[['Name', 'Album', 'Artist', 'Image', 'SpotifyURL', 'Language']]
+        df = df.head(500)
+        return emotion, df
+    except FileNotFoundError:
+        print(f"❌ File not found for emotion: {emotion}")
+        return emotion, None
+
 

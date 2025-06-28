@@ -68,9 +68,7 @@ displayPlaylist = (data) => {
   video.src = null;
   lastDetectedEmotion = data.detected_emotion;
   emotionDisplay.textContent =
-    data.detected_emotion == "neutral"
-      ? "No Face detected"
-      : data.detected_emotion;
+    data.detected_emotion === "neutral" ? "No Face detected" : data.detected_emotion;
   changeEmojiTo(data.detected_emotion);
 
   const table = document.getElementById("playlist-table");
@@ -81,26 +79,26 @@ displayPlaylist = (data) => {
   videoPage.style.display = "none";
   playlistpage.style.display = "block";
 
-  let allTracks = data.music_data;
+  // ✅ Normalize language for each track
+  let allTracks = data.music_data.map((track) => {
+    track.language = track.language?.toLowerCase().trim() || "unknown";
+    return track;
+  });
 
   function renderFilteredTracks() {
     table.querySelector("tbody").innerHTML = "";
 
     const selectedLanguage = languageFilter?.value || "all";
 
-console.log("Available Languages:", allTracks.map(t => t.language));
-console.log("Selected Language:", selectedLanguage);
+    console.log("Available Languages:", [...new Set(allTracks.map(t => t.language))]);
+    console.log("Selected Language:", selectedLanguage);
 
-const filteredTracks =
-  selectedLanguage === "all"
-    ? allTracks
-    : allTracks.filter((track) => {
-        return (
-          track.language &&
-          track.language.trim().toLowerCase() === selectedLanguage.trim().toLowerCase()
-        );
-      });
-
+    const filteredTracks =
+      selectedLanguage === "all"
+        ? allTracks
+        : allTracks.filter(
+            (track) => track.language === selectedLanguage.toLowerCase().trim()
+          );
 
     filteredTracks.forEach((music, index) => {
       let datarow = document.createElement("tr");
@@ -108,26 +106,25 @@ const filteredTracks =
 
       const playCell = document.createElement("td");
       playCell.innerHTML = `
-  <a href="${music.SpotifyURL}" target="_blank" 
-     class="btn btn-success btn-sm d-flex align-items-center gap-1"
-     style="padding: 0.5rem 0.5rem; font-size: 1.0 rem; width: fit-content;">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/8/84/Spotify_icon.svg" 
-         alt="Spotify" style="width: 16px; height: 16px;" />
-    <span>Play</span>
-  </a>
-`;
-
+        <a href="${music.SpotifyURL}" target="_blank" 
+          class="btn btn-success btn-sm d-flex align-items-center gap-1"
+          style="padding: 0.4rem 0.6rem; font-size: 0.85rem; width: fit-content;">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/8/84/Spotify_icon.svg" 
+              alt="Spotify" style="width: 16px; height: 16px;" />
+          <span>Play</span>
+        </a>
+      `;
 
       const nameCell = document.createElement("td");
       nameCell.textContent = music.Name;
 
-       let covercell = document.createElement("td");
-    let cover = document.createElement("img");
-    cover.src = music.Image;
-    covercell.appendChild(cover);
-    cover.style.width = "70px";
-    cover.style.height = "70px";
-    cover.style.borderRadius = "50%";
+      let covercell = document.createElement("td");
+      let cover = document.createElement("img");
+      cover.src = music.Image;
+      cover.style.width = "70px";
+      cover.style.height = "70px";
+      cover.style.borderRadius = "50%";
+      covercell.appendChild(cover);
 
       const artistCell = document.createElement("td");
       artistCell.textContent = music.Artist;
@@ -154,33 +151,40 @@ const filteredTracks =
   }
 
   if (languageFilter) {
-    languageFilter.removeEventListener("change", renderFilteredTracks); // Avoid double-bind
+    languageFilter.removeEventListener("change", renderFilteredTracks); // avoid duplicate listener
     languageFilter.addEventListener("change", renderFilteredTracks);
   }
 
   renderFilteredTracks(); // Initial render
 };
+
 let shuffleButton = document.getElementById("shuffleButton");
 if (shuffleButton) {
   shuffleButton.addEventListener("click", handleShuffleClick);
 }
 
+function fetchPlaylist(isShuffle = false) {
+  const url = isShuffle ? "/get_recommendations?shuffle=1" : "/get_recommendations";
+  return fetch(url)
+    .then((response) => response.text())
+    .then((text) => {
+      const safeText = text.replace(/NaN/g, "null");
+      return JSON.parse(safeText);
+    })
+    .catch((err) => console.log(err));
+}
+
 
 async function handleShuffleClick() {
-  if (!lastDetectedEmotion || lastDetectedEmotion === "neutral") {
-    alert("Please detect an emotion first before shuffling.");
-    return;
-  }
-
   console.log("Shuffling songs...");
   loader.style.display = "block";
   shuffleButton.disabled = true;
 
-  const response = await fetch("/shuffle_recommendations");
-  const data = await response.json();
-
+  const data = await fetchPlaylist(true); // <-- use shuffle flag
   displayPlaylist(data);
 
   loader.style.display = "none";
   shuffleButton.disabled = false;
 }
+
+  
