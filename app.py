@@ -233,39 +233,6 @@ def shuffle_recommendations():
     })
 
 
-@app.route("/get_history_with_songs")
-def get_history_with_songs():
-    if 'user_id' not in session:
-        return jsonify({"error": "User not logged in"}), 401
-
-    user_id = session['user_id']
-
-    # Fetch emotion history for user, order by timestamp descending
-    emotion_entries = EmotionHistory.query.filter_by(user_id=user_id).order_by(EmotionHistory.timestamp.desc()).all()
-
-    history_data = []
-
-    for entry in emotion_entries:
-        # Fetch played songs for this user and emotion, limit or filter by timestamp range if needed
-        songs = PlayedMusicHistory.query.filter_by(
-            user_id=user_id,
-            emotion=entry.emotion
-        ).order_by(PlayedMusicHistory.timestamp.asc()).limit(10).all()  # limit for example
-
-        songs_list = [{
-            "song_name": s.song_name,
-            "artist": s.artist,
-            "album": s.album,
-            "played_at": s.timestamp.strftime("%Y-%m-%d %H:%M:%S") if s.timestamp else None
-        } for s in songs]
-
-        history_data.append({
-            "emotion": entry.emotion,
-            "detected_at": entry.timestamp.strftime("%Y-%m-%d %H:%M:%S"),
-            "played_songs": songs_list
-        })
-
-    return jsonify(history_data)
 
 
 
