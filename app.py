@@ -1,10 +1,18 @@
 from flask import Flask, render_template, Response, jsonify, request, redirect, url_for, session
 from werkzeug.security import generate_password_hash, check_password_hash
 from flask_sqlalchemy import SQLAlchemy
+from flask import jsonify, session
+# from model import PlayedSongHistory 
 from datetime import datetime
 from camera import *
 from PIL import Image
 import numpy as np
+import random
+
+from flask_login import LoginManager
+
+
+
 
 app = Flask(__name__)
 app.secret_key = 'your_secret_key_here'
@@ -13,8 +21,14 @@ app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
 db = SQLAlchemy(app)
 
+from flask_login import UserMixin
+
+login_manager = LoginManager()
+login_manager.init_app(app)   # ✅ Attach to your Flask app
+login_manager.login_view = 'login'  # redirect here if user is not logged in
+
 # Models
-class User(db.Model):
+class User(db.Model,UserMixin):
     id = db.Column(db.Integer, primary_key=True)
     username = db.Column(db.String(80), unique=True, nullable=False)
     email = db.Column(db.String(120), unique=True, nullable=False)
@@ -26,17 +40,27 @@ class EmotionHistory(db.Model):
     emotion = db.Column(db.String(50), nullable=False)
     timestamp = db.Column(db.DateTime, default=datetime.datetime.utcnow)
 
+class PlayedSongHistory(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    user_id = db.Column(db.Integer, db.ForeignKey('user.id'), nullable=False)
+    name = db.Column(db.String(100))
+    artist = db.Column(db.String(100))
+    album = db.Column(db.String(100))
+    language = db.Column(db.String(50))
+    emotion = db.Column(db.String(50))
+    spotify_url = db.Column(db.String(255))
+    played_at = db.Column(db.DateTime, default=datetime.datetime.utcnow)
+
 with app.app_context():
     db.create_all()
 
-
-
-
-
-
 headings = ("Name", "Album", "Artist")
 df1 = music_rec()
-# df1 = df1.head(15)
+
+
+@login_manager.user_loader
+def load_user(user_id):
+    return User.query.get(int(user_id))
 
 @app.route("/")
 def index():
@@ -48,18 +72,32 @@ def app_page():
         return redirect(url_for('index'))
     return render_template("app.html")
 
-@app.route('/login', methods=['POST'])
+from flask_login import login_user
+
+@app.route('/login', methods=['GET', 'POST'])
 def login():
-    data = request.json
+    if request.method == 'GET':
+        # If already logged in, go to the app
+        if current_user.is_authenticated:
+            return redirect(url_for('index'))  # or your main page route
+        return render_template('login.html')  # Show login page for GET
+    
+    # POST request (API login from frontend)
+    data = request.json if request.is_json else request.form
     email = data.get('email')
     password = data.get('password')
+
     user = User.query.filter_by(email=email).first()
     if user and check_password_hash(user.password, password):
         session['user_id'] = user.id
-        session['username'] = user.username  # ✅ store username in session
-        return jsonify({"success": True, "redirect": "/app"})
-    return jsonify({"success": False, "error": "Invalid credentials"})
+        session['username'] = user.username
+        login_user(user)
 
+        # If Flask-Login redirected here with ?next=<url>
+        next_page = request.args.get('next')
+        return jsonify({"success": True, "redirect": next_page or "/app"})
+
+    return jsonify({"success": False, "error": "Invalid credentials"})
 
 @app.route('/get_username')
 def get_username():
@@ -68,7 +106,6 @@ def get_username():
         if user:
             return jsonify({'username': user.username})
     return jsonify({'username': None})
-
 
 @app.route('/register', methods=['POST'])
 def register():
@@ -79,8 +116,8 @@ def register():
 
     if User.query.filter((User.username==username) | (User.email==email)).first():
         return jsonify({"success": False, "error": "Username or email already exists"})
-    
-    hashed_password = generate_password_hash(password)
+
+    hashed_password = generate_password_hash(password,method='pbkdf2:sha256')
     new_user = User(username=username, email=email, password=hashed_password)
     db.session.add(new_user)
     db.session.commit()
@@ -95,17 +132,6 @@ def logout():
     session.pop('user_id', None)
     return redirect(url_for('index'))
 
-@app.route("/get_history")
-def get_history():
-    if 'user_id' not in session:
-        return jsonify([])
-
-    user_id = session['user_id']
-    history = EmotionHistory.query.filter_by(user_id=user_id).order_by(EmotionHistory.timestamp.desc()).all()
-    return jsonify([
-        {"emotion": h.emotion, "timestamp": h.timestamp.strftime('%Y-%m-%d %H:%M:%S')}
-        for h in history
-    ])
 
 def gen(camera):
     while True:
@@ -121,8 +147,6 @@ def video_feed():
 def live_emotion():
     return real_time_emotion()
 
-import random
- 
 @app.route("/get_recommendations")
 def get_recommendations():
     try:
@@ -146,7 +170,6 @@ def get_recommendations():
             db.session.add(new_history)
             db.session.commit()
 
-        # Fetch songs for detected emotion
         _, df1 = max_emotion_reccomendation(emotion=detected_emotion)
 
         music_data = []
@@ -160,11 +183,8 @@ def get_recommendations():
             for lang in ['english', 'hindi', 'nepali']:
                 lang_df = df1[df1['language'] == lang]
                 sampled = lang_df.sample(n=min(10, len(lang_df)))
-                music_data.extend(sampled.to_dict(orient='records'))
-
-            # Log played songs (optional)
-            
-
+                records = sampled.to_dict(orient='records')
+                music_data.extend(records)
         return jsonify({
             "detected_emotion": detected_emotion,
             "music_data": music_data
@@ -174,7 +194,7 @@ def get_recommendations():
         traceback.print_exc()
         return jsonify({"error": "Internal server error", "details": str(e)}), 500
 
-# from flask import request, session, jsonify
+
 
 @app.route("/shuffle_recommendations")
 def shuffle_recommendations():
@@ -185,18 +205,15 @@ def shuffle_recommendations():
     if not detected_emotion or detected_emotion == "neutral":
         return jsonify({"detected_emotion": "neutral", "music_data": []})
 
-    # Fetch all songs for the detected emotion
     _, df1 = max_emotion_reccomendation(emotion=detected_emotion)
     if df1 is None or df1.empty:
         return jsonify({"detected_emotion": detected_emotion, "music_data": []})
 
-    # Normalize language column
     if 'Language' not in df1.columns:
         df1['Language'] = ""
     df1.rename(columns={"Language": "language"}, inplace=True)
     df1['language'] = df1['language'].str.lower().str.strip()
 
-    # Fetch previously shown song URLs for each language
     shown_urls = session.get('shown_urls_by_language', {
         "english": [],
         "hindi": [],
@@ -207,24 +224,15 @@ def shuffle_recommendations():
 
     for lang in ['english', 'hindi', 'nepali']:
         lang_df = df1[df1['language'] == lang]
-
-        # Filter out already shown songs for this language
         unseen = lang_df[~lang_df['SpotifyURL'].isin(shown_urls.get(lang, []))]
-
-        # If not enough unseen, reset the list for this language
         if len(unseen) < 10:
             unseen = lang_df
             shown_urls[lang] = []
 
-        # Sample 10 songs
         sampled = unseen.sample(n=min(10, len(unseen)))
         final_songs.extend(sampled.to_dict(orient='records'))
+        shown_urls[lang].extend(sampled['SpotifyURL'].tolist())
 
-        # Update shown URLs for this language
-        new_urls = sampled['SpotifyURL'].tolist()
-        shown_urls[lang].extend(new_urls)
-
-    # Save updated shown songs to session
     session['shown_urls_by_language'] = shown_urls
 
     return jsonify({
@@ -234,21 +242,51 @@ def shuffle_recommendations():
 
 
 
+from flask_login import LoginManager, UserMixin, login_required, current_user
+@app.route('/get_played_songs')
+@login_required
+def get_played_songs():
+    user_id = current_user.id
+    played_songs = PlayedSongHistory.query.filter_by(user_id=user_id).order_by(PlayedSongHistory.played_at.desc()).all()
+
+    songs_data = [
+        {
+            "name": s.name,
+            "artist": s.artist,
+            "album": s.album,
+            "language": s.language,
+            "emotion": s.emotion,
+            "spotify_url": s.spotify_url,
+            "played_at": s.played_at.strftime("%Y-%m-%d %H:%M:%S")
+        }
+        for s in played_songs
+    ]
+    return jsonify(songs_data)
 
 
-# from flask import render_template, session
+from flask_login import login_required, current_user
+from datetime import datetime
 
-# @app.route('/dashboard')
-# def dashboard():
-#     username = session.get('username')  # Assuming username is stored in session
-#     return render_template('dashboard.html', username=username)
+@app.route('/log_played_song', methods=['POST'])
+@login_required   # ✅ Protect this route
+def log_played_song():
+    data = request.get_json()
 
-# from flask import session, render_template
+    new_song = PlayedSongHistory(
+        user_id=current_user.id,         # ✅ Now current_user is guaranteed to be logged in
+        name=data['name'],
+        artist=data['artist'],
+        album=data['album'],
+        language=data['language'],
+        emotion=data['emotion'],
+        spotify_url=data['spotify_url'],
+        played_at=datetime.utcnow()
+    )
 
-# @app.route('/dashboard')
-# def dashboard():
-#     username = session.get('username')  # make sure this is set during login
-#     return render_template('dashboard.html', username=username)
+    db.session.add(new_song)
+    db.session.commit()
+
+    return jsonify({"success": True, "message": "Song logged successfully"})
 
 @app.route('/image', methods=['POST'])
 def upload_file():
@@ -268,6 +306,19 @@ def upload_file():
             db.session.commit()
 
         return jsonify({"emotion": detected_emotion})
+    
+@app.route("/clear_history", methods=["POST"])
+@login_required  # Only allow logged-in users
+def clear_history():
+    try:
+        # Delete only the current user's history
+        PlayedSongHistory.query.filter_by(user_id=current_user.id).delete()
+        db.session.commit()
+        return jsonify({"message": "✅ Your history has been cleared!"})
+    except Exception as e:
+        print("Error clearing history:", e)
+        return jsonify({"message": "❌ Failed to clear history!"}), 500
+
 
 def allowed_file(filename):
     return '.' in filename and filename.rsplit('.', 1)[1].lower() in {'png', 'jpg', 'jpeg', 'gif'}

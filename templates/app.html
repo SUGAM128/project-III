@@ -18,7 +18,9 @@
     <a href="/" class="navbar-brand ms-3">
       <img style="height: 40px; transform: scale(1.5)" src="{{ url_for('static', filename='/images/logo1.png') }}" />
     </a>
-    <h1 id="welcome" class="text-primary fs-1">Welcome</h1>
+   <h1 id="welcome" class="text-primary fs-1" style="margin-left: 130px;">Welcome</h1>
+
+
     <div class="navbar_options me-4">
       <ul class="nav nav-underline">
         <li class="nav-item"><a href="#" class="nav-link" onclick="showHistory()">History</a></li>
@@ -51,7 +53,7 @@
     </div>
     <div class="d-flex justify-content-center mt-2">
       <button id="generateButton" class="btn btn btn-warning text-dark border-secondary btn-lg p-2">
-        Generate <br /> Playlist
+        Generate Playlist
       </button>
       <div id="loader" style="display: none">
         <div class="loading loading01">
@@ -105,16 +107,24 @@
     </div>
   </div>
 
-  <!-- History Section -->
-<div class="container mt-5 pt-5" id="history-section" style="display: none">
-  <h2 class="text-center mb-4">Played Songs History</h2>
+  <div class="container mt-5 pt-5" id="history-section" style="display: none">
+  <div class="position-relative mb-3">
+    
+    <!-- Centered Title -->
+    <h2 class="text-center mb-0">Played Songs History</h2>
+
+    <!-- Clear History Button on Right -->
+    <button id="clearHistoryBtn" class="btn btn-danger position-absolute end-0 top-0">
+      Clear History
+    </button>
+  </div>
+
   <div class="history-display">
     <table id="history-songs-table" class="music-table table table-striped">
       <thead>
         <tr>
           <th>#</th>
-          <th></th> <!-- Play button -->
-          <th></th> <!-- Cover -->
+          <th></th>
           <th>Name</th>
           <th>Artist</th>
           <th>Album</th>
@@ -133,23 +143,118 @@
 
 
   <script>
-  
 
-    function showCamera() {
+    
+document.addEventListener("DOMContentLoaded", function () {
+  const clearBtn = document.getElementById("clearHistoryBtn");
+  if (clearBtn) {
+    clearBtn.addEventListener("click", function () {
+      if (confirm("Are you sure you want to delete all history?")) {
+        fetch("/clear_history", { method: "POST" })
+          .then((res) => res.json())
+          .then((data) => {
+            alert(data.message);
+            showHistory(); // refresh history table
+          })
+          .catch((err) => console.error("Error clearing history:", err));
+      }
+    });
+  }
+});
+
+
+    function showHistory() {
+  document.getElementById("camera-section").style.display = "none";
+  document.querySelector(".playlist-container").style.display = "none";
+  document.getElementById("history-section").style.display = "block";
+
+  const tbody = document.querySelector("#history-songs-table tbody");
+  tbody.innerHTML = `<tr><td colspan="8" class="text-center">Loading...</td></tr>`;
+
+  fetch('/get_played_songs')
+    .then(res => res.json())
+    .then(data => {
+      tbody.innerHTML = ""; 
+
+      if (!data.length) {
+        tbody.innerHTML = `<tr><td colspan="8" class="text-center">No songs played yet.</td></tr>`;
+        return;
+      }
+
+      data.forEach((song, index) => {
+        const row = document.createElement("tr");
+        row.innerHTML = `
+          <td>${index + 1}</td>
+          <td>
+            <a href="${song.spotify_url}" target="_blank"  
+              class="btn btn-success btn-sm d-inline-flex align-items-center gap-1" 
+              style="padding: 4px 6px; font-size: 0.8rem; white-space: nowrap;">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/8/84/Spotify_icon.svg" 
+                  alt="Spotify" style="width: 14px; height: 14px;" />
+              <span>Play</span>
+            </a>
+          </td>
+
+
+          <td>${song.name}</td>
+          <td>${song.artist}</td>
+          <td>${song.album}</td>
+          <td>${song.language}</td>
+          <td>${song.emotion}</td>
+          <td>${song.played_at}</td>
+        `;
+        tbody.appendChild(row);
+      });
+    })
+    .catch(err => {
+      console.error("Error fetching history:", err);
+      tbody.innerHTML = `<tr><td colspan="8" class="text-center text-danger">Failed to load history.</td></tr>`;
+    });
+}
+
+
+function logAndRedirect(song, emotion) {
+  console.log("🟢 logAndRedirect CALLED", song, emotion); // Debugging log
+
+  fetch('/log_played_song', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+      name: song.Name,
+      artist: song.Artist,
+      album: song.Album,
+      language: song.language,
+      emotion: emotion,
+      spotify_url: song.SpotifyURL
+    })
+  })
+  .then(response => response.json())
+  .then(data => {
+    console.log("✅ Song logged:", data);
+    // After logging, open Spotify link
+    window.open(song.SpotifyURL, '_blank');
+  })
+  .catch(error => {
+    console.error("❌ Failed to log song:", error);
+    // Even if logging fails, still open Spotify
+    window.open(song.SpotifyURL, '_blank');
+  });
+}
+
+
+
+
+ function showCamera() {
       document.getElementById("history-section").style.display = "none";
       document.querySelector(".playlist-container").style.display = "none";
       document.getElementById("camera-section").style.display = "block";
       location.reload();
     }
 
-    //
 
-    // Example use (you should call this from your AJAX success handler)
-    // populatePlaylist([
-    //   { name: "Song 1", artist: "Artist A", album: "Album X", spotify_url: "https://open.spotify.com/track/..." },
-    //   ...
-    // ]);
-  </script>
+</script>
+
+
   
 </body>
 </html>

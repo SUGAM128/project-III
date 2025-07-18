@@ -105,15 +105,27 @@ displayPlaylist = (data) => {
       datarow.className = "playlist-row mt-1 mb-1";
 
       const playCell = document.createElement("td");
-      playCell.innerHTML = `
-        <a href="${music.SpotifyURL}" target="_blank" 
-          class="btn btn-success btn-sm d-flex align-items-center gap-1"
-          style="padding: 0.4rem 0.6rem; font-size: 0.85rem; width: fit-content;">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/8/84/Spotify_icon.svg" 
-              alt="Spotify" style="width: 16px; height: 16px;" />
-          <span>Play</span>
-        </a>
-      `;
+
+const playBtn = document.createElement("a");
+playBtn.href = music.SpotifyURL;
+playBtn.target = "_blank";  // open in new tab
+playBtn.className = "btn btn-success btn-sm d-flex align-items-center gap-1";
+playBtn.style = "padding: 0.4rem 0.6rem; font-size: 0.85rem; width: fit-content;";
+playBtn.innerHTML = `
+  <img src="https://upload.wikimedia.org/wikipedia/commons/8/84/Spotify_icon.svg" 
+       alt="Spotify" style="width: 16px; height: 16px;" />
+  <span>Play</span>
+`;
+
+playBtn.addEventListener("click", () => {
+   logAndRedirect(music, lastDetectedEmotion);  // only logs, does not block navigation
+});
+
+
+
+playCell.appendChild(playBtn);
+
+
 
       const nameCell = document.createElement("td");
       nameCell.textContent = music.Name;
@@ -187,4 +199,4 @@ async function handleShuffleClick() {
   shuffleButton.disabled = false;
 }
 
-  
+ 
